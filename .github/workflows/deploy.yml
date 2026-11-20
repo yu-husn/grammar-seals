@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
@@ -36,7 +37,33 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: dist
+      - name: Wait for the uploaded site to become available
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SITE_ARTIFACT: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          node --input-type=module <<'NODE'
+          const url = `${process.env.GITHUB_API_URL}/repos/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}/artifacts?per_page=100`;
+          for (let attempt = 0; attempt < 12; attempt++) {
+            const response = await fetch(url, { headers: {
+              Authorization: `Bearer ${process.env.GH_TOKEN}`,
+              Accept: 'application/vnd.github+json'
+            }});
+            if (!response.ok) throw new Error(`Artifact lookup failed: ${response.status}`);
+            const { artifacts } = await response.json();
+            const matches = artifacts.filter(artifact => artifact.name === process.env.SITE_ARTIFACT && !artifact.expired);
+            if (matches.length === 1) {
+              console.log('The uploaded site is available for deployment.');
+              process.exit(0);
+            }
+            await new Promise(resolve => setTimeout(resolve, 5000));
+          }
+          throw new Error('The uploaded site did not become available within one minute.');
+          NODE
       - name: Publish GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
