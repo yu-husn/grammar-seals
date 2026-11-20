@@ -1,0 +1,12 @@
+import {Suspense,useRef} from 'react';
+import {Canvas,useFrame,useThree} from '@react-three/fiber';
+import {OrbitControls} from '@react-three/drei';
+import {PlayableHero} from './PlayableHero';
+import {heroes,heroIds} from './heroes';
+import {useGame} from './store';
+import SceneExposure from './SceneExposure';
+function PreviewModels(){const selected=useGame(s=>s.hero),{gl,scene,camera}=useThree(),elapsed=useRef(0);useFrame((_,dt)=>{elapsed.current+=dt;if(elapsed.current<.2)return;elapsed.current=0;const models=heroIds.map(id=>{const model=scene.getObjectByName(heroes[id].name);return {id,gender:model?.userData.gender,revision:model?.userData.modelRevision,silhouette:model?.userData.silhouette}});gl.domElement.dataset.heroModels=JSON.stringify(models);gl.domElement.dataset.previewCamera=JSON.stringify(camera.position.toArray().map(v=>Number(v.toFixed(3))));gl.domElement.dataset.previewDrawCalls=String(gl.info.render.calls);gl.domElement.dataset.previewTriangles=String(gl.info.render.triangles)});return <>{heroIds.map((id,i)=><group key={id} position={[i===0?-.79:.79,0,0]}><mesh position={[0,-.09,0]}><cylinderGeometry args={[.60,.65,.14,40]}/><meshStandardMaterial color="#263b49" metalness={.25} roughness={.6}/></mesh><mesh rotation={[-Math.PI/2,0,0]} position={[0,-.012,0]}><ringGeometry args={[.55,.57,40]}/><meshBasicMaterial color={selected===id?'#c6e6c9':'#72818d'}/></mesh><PlayableHero female={id==='suying'}/></group>)}</>}
+export default function HeroPreview(){const selected=useGame(s=>s.hero);return <figure className="hero-3d-preview" aria-label="男女主角3D造型預覽"><div className="hero-preview-canvas"><Canvas dpr={1} camera={{position:[0,1.55,6.4],fov:30}} fallback={<p>3D預覽需要支援WebGL的瀏覽器，仍可使用下方角色卡選擇。</p>}><SceneExposure/><ambientLight intensity={.85}/><hemisphereLight args={['#d5edff','#4b3641',1.1]}/><directionalLight position={[3,5,5]} color="#fff2d7" intensity={3.1}/><directionalLight position={[-3,3,-3]} color="#8ed8e1" intensity={2.6}/><Suspense fallback={null}><PreviewModels/></Suspense><OrbitControls target={[0,1.3,0]} enablePan={false} minDistance={5.4} maxDistance={8} minPolarAngle={Math.PI*.36} maxPolarAngle={Math.PI*.53}/></Canvas></div><figcaption><div className="hero-preview-names"><span className={selected==='shenmo'?'selected':''}>沈墨 · 男</span><span className={selected==='suying'?'selected':''}>蘇映 · 女</span></div><span>拖曳旋轉 · 滾輪／雙指縮放 · 下方二選一</span></figcaption></figure>}
+
+
+

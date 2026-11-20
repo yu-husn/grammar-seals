@@ -1,0 +1,4 @@
+export const domainStampIds=['narrative','attribute','judgment','existence'] as const;
+export type StampId=typeof domainStampIds[number]|'subject'|'boss'|'gems'|'blast';
+const labels:Record<StampId,string>={narrative:'敘事之印',attribute:'表態之印',judgment:'判斷之印',existence:'有無之印',subject:'主語之印',boss:'四句歸序',gems:'寶石之印',blast:'轟擊之印'};
+export default function CompletionStamp({id,small=false,animate=true}:{id:StampId;small?:boolean;animate?:boolean}){return <figure className={`completion-stamp ${small?'stamp-small':''} ${animate?'stamp-drop':''}`} role="img" aria-label={`${labels[id]} · 通關印章`} data-stamp={id}><span className="stamp-ink"><span className="stamp-letter-grid" aria-hidden="true">{[...labels[id]].map((letter,i)=><b key={i}>{letter}</b>)}</span></span><figcaption>{labels[id]}<span>已通關</span></figcaption></figure>}

@@ -1,0 +1,1897 @@
+[
+  {
+    "id": "teacher-narrative-exam-reading",
+    "sentence": "他無比專注地閱讀會考國文考題。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "他",
+        "role": "主語"
+      },
+      {
+        "text": "無比專注地",
+        "role": "修飾述語的成分"
+      },
+      {
+        "text": "閱讀",
+        "role": "述語"
+      },
+      {
+        "text": "會考國文考題",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "主要結構是「他／閱讀／會考國文考題」。「閱讀」是主要動詞，敘述閱讀的行為；「無比專注地」修飾閱讀的情狀，「無比」表示程度。因此是主語＋述語＋賓語的敘事句。",
+    "commonError": "「無比」中的「無」不是表示不存在的主要述語；「專注地」修飾「閱讀」，不是全句的主要表語。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 2,
+    "level": "行跡迷城",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定分類；未提供考試出處，句中提及會考不代表本題來自會考原卷。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "行跡迷城",
+    "stageNumber": 1,
+    "stageQuestion": 1,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-narrative-mother-care",
+    "sentence": "媽媽無微不至地照顧孩子。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "媽媽",
+        "role": "主語"
+      },
+      {
+        "text": "無微不至地",
+        "role": "修飾述語的成分"
+      },
+      {
+        "text": "照顧",
+        "role": "述語"
+      },
+      {
+        "text": "孩子",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "主要結構是「媽媽／照顧／孩子」。「照顧」是主要動詞，「無微不至地」修飾照顧的方式，表示照顧得十分周到。因此是主語＋述語＋賓語的敘事句。",
+    "commonError": "「無微不至地」是修飾動作的成分，不能只因成語含「無」就判為有無句，也不能把它當作全句主要表語。",
+    "sourceNote": "教師原輸入「媽媽無微不致地照顧孩子。」；成語更正為「無微不至」，保留教師指定的敘事句分類。未提供考試出處。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stem": "點選句中的述語，解除機關。",
+    "options": [
+      "媽媽",
+      "無微不至地",
+      "照顧",
+      "孩子"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "level": "行跡迷城",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "stage": "行跡迷城",
+    "stageNumber": 1,
+    "stageQuestion": 2,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 照顧",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-unrelated",
+    "sentence": "他與那位老人非親非故。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "他與那位老人",
+        "role": "主語／關係雙方"
+      },
+      {
+        "text": "非",
+        "role": "否定判斷詞（前項）"
+      },
+      {
+        "text": "親",
+        "role": "斷語（親屬）"
+      },
+      {
+        "text": "非",
+        "role": "否定判斷詞（後項）"
+      },
+      {
+        "text": "故",
+        "role": "斷語（故舊）"
+      }
+    ],
+    "explanation": "可還原為「他與那位老人不是親戚，也不是故交」。「親」「故」指親屬與故舊，兩個「非」都否定名詞所表示的關係身分。全句主要判定雙方的關係，因此依教師指定列為判斷句。",
+    "commonError": "不能只看「非」字就分類；此題須依「非親／非故」否定親屬與故舊關係的主要述謂分析。",
+    "sourceNote": "教師提供原句並指定為判斷句；依「不是親戚，也不是故交」的否定關係判斷分析，採教師已核准分類。未提供考試出處。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stem": "句中有「非」，請依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "level": "行跡迷城",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "陷阱",
+    "stage": "行跡迷城",
+    "stageNumber": 1,
+    "stageQuestion": 3,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 判斷句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-downpour",
+    "sentence": "下午大雨滂沱。",
+    "category": "表態句",
+    "components": [
+      {
+        "text": "下午",
+        "role": "時間修飾語"
+      },
+      {
+        "text": "大雨",
+        "role": "主語"
+      },
+      {
+        "text": "滂沱",
+        "role": "表語"
+      }
+    ],
+    "explanation": "「下午」交代時間，主要結構是「大雨／滂沱」。「滂沱」描寫雨勢盛大的狀態，作表語，因此是表態句。",
+    "commonError": "「下午」是時間修飾語；應找出描寫「大雨」狀態的主要表語「滂沱」。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 3,
+    "difficulty": 1,
+    "level": "行跡迷城",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定分類；依本次指示加入，未標造考試年代、題號或原作出處。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "行跡迷城",
+    "stageNumber": 1,
+    "stageQuestion": 4,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 表態句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-existence-heaven-earth",
+    "sentence": "天地有情。",
+    "components": [
+      {
+        "text": "天地",
+        "role": "主語"
+      },
+      {
+        "text": "有",
+        "role": "述語"
+      },
+      {
+        "text": "情",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "「天地」是主語，主要述語「有」表示領有情意，「情」是所領有的對象，作賓語。全句主要結構是主語＋有＋賓語，因此是有無句。",
+    "commonError": "「情」雖是抽象事物，仍可作「有」所領有的對象；不能只因句子表達情意就判為表態句。",
+    "category": "有無句",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 1,
+    "difficulty": 1,
+    "level": "行跡迷城",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "行跡迷城",
+    "stageNumber": 1,
+    "stageQuestion": 5,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "B 有無句",
+    "examReferences": [
+      {
+        "year": "98",
+        "session": "1",
+        "number": "14",
+        "exam": "98年第一次基測第14題",
+        "url": "http://area.hcjh.tn.edu.tw/noise/bc/view.asp?articleid=20160803153234&Discuss=bct9801&Page=6&Keyword=%A4%E5%AAk",
+        "verification": "校方歷屆網站保存頁已核對年代題號；未核官方原卷",
+        "method": "原網站題幹或選項含此句／受測片段；此題為獨立改編練習"
+      }
+    ]
+  },
+  {
+    "category": "敘事句",
+    "commonError": "先找主要述語，再問「誰／什麼」發出動作；不要把修飾語或賓語當成主語。",
+    "difficulty": 1,
+    "level": "行跡迷城",
+    "sourceType": "原創練習題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "原創已檢核",
+    "kind": "解剖",
+    "id": "subject-full-01",
+    "target": "完整主語",
+    "stem": "選出完整主語，點亮尋主石碑。",
+    "sentence": "提著燈籠的少年推開古城的門。",
+    "options": [
+      "提著燈籠的少年",
+      "少年",
+      "燈籠",
+      "古城的門"
+    ],
+    "answer": 0,
+    "components": [
+      {
+        "text": "提著燈籠的少年",
+        "role": "主語"
+      },
+      {
+        "text": "推開",
+        "role": "述語"
+      },
+      {
+        "text": "古城的門",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "先找主要動詞「推開」；誰推開？「提著燈籠的少年」。完整主語包含修飾語「提著燈籠的」，中心語才是「少年」。",
+    "sourceNote": "關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "行跡迷城",
+    "stageNumber": 1,
+    "stageQuestion": 6,
+    "points": 2.5,
+    "drawGroup": "original",
+    "correctAnswer": "A 提著燈籠的少年",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-narrative-moonlight",
+    "sentence": "月色入戶。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "月色",
+        "role": "主語"
+      },
+      {
+        "text": "入",
+        "role": "述語"
+      },
+      {
+        "text": "戶",
+        "role": "賓語／進入的處所"
+      }
+    ],
+    "explanation": "「月色」是主語，「入」是進入的動詞，「戶」指門戶，交代月色進入的處所。全句敘述月光照入門戶的情景，主要述語為動詞，因此是敘事句。",
+    "commonError": "主語不必是人；月色同樣可以搭配動詞「入」構成敘事句。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 2,
+    "level": "幻象迷宮",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "幻象迷宮",
+    "stageNumber": 2,
+    "stageQuestion": 1,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-silent-boss",
+    "sentence": "無言君大魔王非常恐怖。",
+    "category": "表態句",
+    "components": [
+      {
+        "text": "無言君大魔王",
+        "role": "主語"
+      },
+      {
+        "text": "非常",
+        "role": "程度副詞"
+      },
+      {
+        "text": "恐怖",
+        "role": "表語"
+      }
+    ],
+    "explanation": "「無言君大魔王」是主語，主要表語「恐怖」描述其特性，「非常」修飾程度。全句主要結構是主語＋表語，因此是表態句。",
+    "commonError": "「無言君」是角色名稱，名稱中的「無」不是主要述語；「非常」是程度副詞，也不是否定判斷。",
+    "difficulty": 2,
+    "stem": "點選句中的表語，解除機關。",
+    "options": [
+      "無言君大魔王",
+      "非常",
+      "恐怖"
+    ],
+    "answer": 2,
+    "level": "幻象迷宮",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "幻象迷宮",
+    "stageNumber": 2,
+    "stageQuestion": 2,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 恐怖",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-existence-night-moon",
+    "sentence": "何夜無月？",
+    "category": "有無句",
+    "components": [
+      {
+        "text": "何夜",
+        "role": "時間話題"
+      },
+      {
+        "text": "無",
+        "role": "述語"
+      },
+      {
+        "text": "月",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "「何夜」提出哪一夜的時間話題，「無」是表示不存在的主要述語，「月」是所談論的對象。反問語氣表達哪一夜沒有月亮，基本結構仍是有無句。",
+    "commonError": "反問是語氣，與四大基本句型是不同層次；應辨認「無」表示存在與否。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "level": "幻象迷宮",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "陷阱",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "幻象迷宮",
+    "stageNumber": 2,
+    "stageQuestion": 3,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "B 有無句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-lesson-05",
+    "stem": "倒影顛倒了語序，請找出完整主語。",
+    "sentence": "靜極了，這朝來水溶溶的大道。",
+    "options": [
+      "靜極了",
+      "這朝來水溶溶的大道",
+      "大道",
+      "水溶溶"
+    ],
+    "answer": 1,
+    "category": "表態句",
+    "components": [
+      {
+        "text": "靜極了",
+        "role": "前置表語"
+      },
+      {
+        "text": "這朝來水溶溶的大道",
+        "role": "後置主語"
+      }
+    ],
+    "explanation": "還原為「這朝來水溶溶的大道靜極了」；主語中心語是「大道」，表語「靜極了」描述狀態，是表態句兼倒裝。",
+    "commonError": "先找主要述謂；注意省略、倒裝及修飾語，不只看單一字詞。",
+    "difficulty": 1,
+    "level": "幻象迷宮",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供課堂練習第 5 題；依指定分類，未虛構考試年份或原作出處。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "幻象迷宮",
+    "stageNumber": 2,
+    "stageQuestion": 4,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "B 這朝來水溶溶的大道",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-lawless",
+    "sentence": "那群歹徒的行為簡直無法無天。",
+    "category": "表態句",
+    "components": [
+      {
+        "text": "那群歹徒的行為",
+        "role": "主語"
+      },
+      {
+        "text": "簡直",
+        "role": "副詞"
+      },
+      {
+        "text": "無法無天",
+        "role": "表語"
+      }
+    ],
+    "explanation": "「那群歹徒的行為」是主語，「無法無天」整體作主要表語，描述行為毫無法紀、肆意妄為的性質；「簡直」是副詞。因此是主語＋表語的表態句。",
+    "commonError": "「無法無天」整體是描述性質的成語，不可拆出其中的「無」當成全句表示不存在的主要述語。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "level": "幻象迷宮",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "幻象迷宮",
+    "stageNumber": 2,
+    "stageQuestion": 5,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 表態句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-lotus",
+    "sentence": "蓮，花之君子者也。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "蓮",
+        "role": "主語"
+      },
+      {
+        "text": "（是）",
+        "role": "省略繫詞"
+      },
+      {
+        "text": "花之君子者",
+        "role": "斷語"
+      },
+      {
+        "text": "也",
+        "role": "句末語氣詞"
+      }
+    ],
+    "explanation": "「蓮」是主語，「花之君子者」是斷語，將蓮比作花中的君子。省略相當於「是」的繫詞，以「也」收束，全句判定蓮的類別身分，因此是文言判斷句。",
+    "commonError": "比喻的內容也能置於判斷結構中；須依主語與名詞性斷語的關係分析，不只找「是」字。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "level": "幻象迷宮",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "幻象迷宮",
+    "stageNumber": 2,
+    "stageQuestion": 6,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 判斷句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-shizhi",
+    "sentence": "釋之為廷尉。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "釋之",
+        "role": "主語"
+      },
+      {
+        "text": "為",
+        "role": "繫詞"
+      },
+      {
+        "text": "廷尉",
+        "role": "斷語"
+      }
+    ],
+    "explanation": "「釋之」是主語，「為」在此相當於「是／擔任」，「廷尉」是官職，作斷語。全句判定釋之的身分，依教師指定列為判斷句。",
+    "commonError": "「為」有多種意思，須依本句判定官職身分的關係理解，不能一律當成動作。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "level": "真假審判",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "真假審判",
+    "stageNumber": 3,
+    "stageQuestion": 1,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 判斷句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-yuxun",
+    "sentence": "鈺珣老師是一個很棒的老師。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "鈺珣老師",
+        "role": "主語"
+      },
+      {
+        "text": "是",
+        "role": "繫詞"
+      },
+      {
+        "text": "一個很棒的老師",
+        "role": "斷語"
+      }
+    ],
+    "explanation": "「鈺珣老師」是主語，「是」連結主語與斷語「一個很棒的老師」，判定其身分類別。雖然斷語內有「很棒的」修飾「老師」，全句主要結構仍是主語＋繫詞＋斷語，因此是判斷句。",
+    "commonError": "「很棒的」在斷語內修飾名詞「老師」，不是直接作全句主要表語；應先分析主語與斷語的判定關係。",
+    "difficulty": 1,
+    "stem": "點選句中的繫詞，解除機關。",
+    "options": [
+      "鈺珣老師",
+      "是",
+      "一個很棒的老師"
+    ],
+    "answer": 1,
+    "level": "真假審判",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "真假審判",
+    "stageNumber": 3,
+    "stageQuestion": 2,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "B 是",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-narrative-tingwei-fine",
+    "sentence": "廷尉乃當之罰金！",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "廷尉",
+        "role": "主語"
+      },
+      {
+        "text": "乃",
+        "role": "副詞"
+      },
+      {
+        "text": "當",
+        "role": "述語"
+      },
+      {
+        "text": "之",
+        "role": "賓語"
+      },
+      {
+        "text": "罰金",
+        "role": "判處的內容"
+      }
+    ],
+    "explanation": "「廷尉」是主語，「乃」在此表示竟然、卻，「當」是判處的動詞，「之」指被判處的人，「罰金」說明處罰內容。全句敘述判處罰金的行為，因此是敘事句。",
+    "commonError": "「乃」在此是副詞，不是相當於「是」的繫詞；須依「當之罰金」的動作關係判斷。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 2,
+    "level": "真假審判",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "陷阱",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "真假審判",
+    "stageNumber": 3,
+    "stageQuestion": 3,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-existence-state-advisers",
+    "sentence": "入則無法家拂士，出則無敵國外患者。",
+    "category": "有無句",
+    "components": [
+      {
+        "text": "（國家）",
+        "role": "省略主語／話題"
+      },
+      {
+        "text": "入則",
+        "role": "國內情況的條件成分"
+      },
+      {
+        "text": "無",
+        "role": "述語（前分句）"
+      },
+      {
+        "text": "法家拂士",
+        "role": "賓語（前分句）"
+      },
+      {
+        "text": "出則",
+        "role": "國外情況的條件成分"
+      },
+      {
+        "text": "無",
+        "role": "述語（後分句）"
+      },
+      {
+        "text": "敵國外患",
+        "role": "賓語（後分句）"
+      },
+      {
+        "text": "者",
+        "role": "條件性語氣成分"
+      }
+    ],
+    "explanation": "這是原文複句中截出的條件部分，依兩個分句的主要結構分類。「入」「出」分別交代國內與國外的情況，兩個主要述語都是表示欠缺的「無」；所欠缺的對象分別是「法家拂士」與「敵國外患」，因此列為有無句。「拂」在此通「弼」，有輔佐之意。",
+    "commonError": "此題判斷的是教師提供的兩個有無分句；不能把「入、出」誤當作全句主要移動動作，也不把未列出的後續原文混入判斷。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "level": "真假審判",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "真假審判",
+    "stageNumber": 3,
+    "stageQuestion": 4,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "B 有無句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-wang-lantian",
+    "sentence": "王藍田性急。",
+    "category": "表態句",
+    "components": [
+      {
+        "text": "王藍田",
+        "role": "主語"
+      },
+      {
+        "text": "性急",
+        "role": "表語"
+      }
+    ],
+    "explanation": "「王藍田」是主語，「性急」描寫他的性情急躁，作主要表語。全句以性質描寫為主，因此是表態句。",
+    "commonError": "「急」描述性情，不是敘述王藍田做了什麼動作。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "level": "真假審判",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "真假審判",
+    "stageNumber": 3,
+    "stageQuestion": 5,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 表態句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-courage",
+    "sentence": "真正的勇氣不是毫無恐懼。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "真正的勇氣",
+        "role": "主語"
+      },
+      {
+        "text": "不",
+        "role": "否定副詞"
+      },
+      {
+        "text": "是",
+        "role": "繫詞"
+      },
+      {
+        "text": "毫無恐懼",
+        "role": "斷語"
+      }
+    ],
+    "explanation": "全句以「不是」否定將「真正的勇氣」界定為「毫無恐懼」，主要關係是對勇氣的定義作否定判斷。主語是「真正的勇氣」，「不」否定繫詞「是」，「毫無恐懼」整體作斷語，因此是判斷句。",
+    "commonError": "「無」位於斷語「毫無恐懼」內部；全句的主要結構是主語＋不是＋斷語，不能只看內部的「無」。",
+    "stem": "點選句中的斷語，解除機關。",
+    "options": [
+      "真正的勇氣",
+      "不",
+      "是",
+      "毫無恐懼"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "level": "真假審判",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "真假審判",
+    "stageNumber": 3,
+    "stageQuestion": 6,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 毫無恐懼",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-existence-mountain-years",
+    "sentence": "山中無甲子。",
+    "category": "有無句",
+    "components": [
+      {
+        "text": "山中",
+        "role": "主語／處所話題"
+      },
+      {
+        "text": "無",
+        "role": "述語"
+      },
+      {
+        "text": "甲子",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "「山中」交代處所，主要述語「無」表示沒有，「甲子」借指歲時、紀年，是被否定存在的對象。主要結構是處所話題＋無＋賓語，因此是有無句。",
+    "commonError": "應確認「無」是否為全句主要述語；本句「無」表示歲時紀年的欠缺，不是否定另一個動作。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 1,
+    "difficulty": 1,
+    "level": "虛實禁域",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "虛實禁域",
+    "stageNumber": 4,
+    "stageQuestion": 1,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "B 有無句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-liang-cautious",
+    "sentence": "亮平生謹慎。",
+    "category": "表態句",
+    "components": [
+      {
+        "text": "亮",
+        "role": "主語"
+      },
+      {
+        "text": "平生",
+        "role": "時間修飾語"
+      },
+      {
+        "text": "謹慎",
+        "role": "表語"
+      }
+    ],
+    "explanation": "「亮」是主語，「平生」交代一向、平日的時間範圍，「謹慎」描寫亮的性情特質，作主要表語，因此是表態句。",
+    "commonError": "「平生」修飾性質持續的時間範圍；句子主要回答「亮怎麼樣」。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "level": "虛實禁域",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "虛實禁域",
+    "stageNumber": 4,
+    "stageQuestion": 2,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 表態句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-narrative-orderly",
+    "sentence": "他有條不紊地處理事情。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "他",
+        "role": "主語"
+      },
+      {
+        "text": "有條不紊地",
+        "role": "修飾述語的成分"
+      },
+      {
+        "text": "處理",
+        "role": "述語"
+      },
+      {
+        "text": "事情",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "主要結構是「他／處理／事情」，敘述處理的行為。「有條不紊地」說明處理的方式，修飾動詞「處理」；其中的「有」不是全句表示存在或領有的主要述語，因此是敘事句。",
+    "commonError": "不要把方式修飾語「有條不紊地」中的「有」當成全句主要述語。",
+    "stem": "句中有「有」，一定是有無句嗎？依主要述語判斷。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 2,
+    "level": "虛實禁域",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "陷阱",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "虛實禁域",
+    "stageNumber": 4,
+    "stageQuestion": 3,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-trap-merchant",
+    "stem": "不要只看「有、無」，請判斷全句的句型。",
+    "sentence": "賈人搬有運無。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "賈人",
+        "role": "主語"
+      },
+      {
+        "text": "搬有運無",
+        "role": "述語"
+      }
+    ],
+    "explanation": "「賈人」指商人，「搬有運無」敘述搬運、調度貨物的行為。「有、無」在此涉及貨物的有餘與欠缺，不是全句表示存在的主要述語，因此是敘事句。",
+    "commonError": "句內出現「有、無」，不代表主要述語就是表示存在的「有、無」。",
+    "difficulty": 2,
+    "level": "虛實禁域",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "陷阱",
+    "sourceNote": "關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "虛實禁域",
+    "stageNumber": 4,
+    "stageQuestion": 4,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-existence-heaven-eyes",
+    "sentence": "蒼天有眼。",
+    "components": [
+      {
+        "text": "蒼天",
+        "role": "主語"
+      },
+      {
+        "text": "有",
+        "role": "述語"
+      },
+      {
+        "text": "眼",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "「蒼天」是主語，主要述語「有」表示領有，「眼」是賓語。「有眼」在這裡可比喻能明察是非；比喻用法不改變主語＋有＋賓語的基本結構，因此是有無句。",
+    "commonError": "應依「蒼天／有／眼」的主要述謂關係判斷；不能因為「有眼」有比喻意義，就改判為表態句。",
+    "category": "有無句",
+    "stem": "點選句中的述語，解除機關。",
+    "options": [
+      "蒼天",
+      "有",
+      "眼"
+    ],
+    "answer": 1,
+    "difficulty": 1,
+    "level": "虛實禁域",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "虛實禁域",
+    "stageNumber": 4,
+    "stageQuestion": 5,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "B 有",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-tingwei-standard",
+    "sentence": "廷尉，天下之平也。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "廷尉",
+        "role": "主語"
+      },
+      {
+        "text": "（是）",
+        "role": "省略繫詞"
+      },
+      {
+        "text": "天下之平",
+        "role": "斷語"
+      },
+      {
+        "text": "也",
+        "role": "句末語氣詞"
+      }
+    ],
+    "explanation": "「廷尉」是主語，「天下之平」指天下執法的公平準則，作斷語。可理解為「廷尉是天下執法的準則」，省略繫詞，以「也」結尾，屬文言判斷句。",
+    "commonError": "文言判斷句可以省略繫詞；「平」在「天下之平」這個名詞性詞組中，不是全句獨立表語。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "level": "虛實禁域",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "辨識",
+    "sourceNote": "教師提供原句與指定句型；保留本次題文。未提供考試出處，未標造基測／會考年代或題號；括號與截句說明見逐題解析。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "虛實禁域",
+    "stageNumber": 4,
+    "stageQuestion": 6,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 判斷句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-narrative-quiet-help",
+    "sentence": "他總是默默幫助別人。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "他",
+        "role": "主語"
+      },
+      {
+        "text": "總是",
+        "role": "頻率副詞"
+      },
+      {
+        "text": "默默",
+        "role": "方式副詞"
+      },
+      {
+        "text": "幫助",
+        "role": "述語"
+      },
+      {
+        "text": "別人",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "「他」是主語，主要動詞「幫助」敘述行為，「別人」是賓語。「總是」修飾頻率，「默默」修飾幫助的方式。全句主要結構是主語＋述語＋賓語，因此是敘事句。",
+    "commonError": "「總是」中的「是」不是判定身分的繫詞；「默默」修飾動詞，不是全句的主要表語。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 1,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 1,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-first-love",
+    "stem": "判斷主要表語的功能，選出句型。",
+    "sentence": "初戀無限好。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 3,
+    "category": "表態句",
+    "components": [
+      {
+        "text": "初戀",
+        "role": "主語"
+      },
+      {
+        "text": "無限好",
+        "role": "表語"
+      }
+    ],
+    "explanation": "「初戀」是主語，「無限好」是表語，描述初戀的性質。「無限」修飾「好」的程度，不是表示欠缺或不存在的主要述語，因此是表態句。",
+    "commonError": "「無限」含有「無」字，但整體表示程度，不是有無句的述語。",
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 2,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 表態句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-simayi",
+    "sentence": "司馬懿乃魏之名將。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "司馬懿",
+        "role": "主語"
+      },
+      {
+        "text": "乃",
+        "role": "繫詞"
+      },
+      {
+        "text": "魏之名將",
+        "role": "斷語"
+      }
+    ],
+    "explanation": "「乃」相當於「是」，把司馬懿判定為魏國的名將。主要結構是主語＋繫詞＋斷語，因此是判斷句。",
+    "commonError": "文言判斷句不一定使用「是」；此句的「乃」具有連結主語與斷語的功能。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 2,
+    "difficulty": 1,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供原句與指定分類；依本次指示加入，未標造考試年代、題號或原作出處。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 3,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 判斷句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-compared-7",
+    "stem": "依主要述謂關係判斷句型。",
+    "sentence": "他有一顆善良的心。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 1,
+    "category": "有無句",
+    "components": [
+      {
+        "text": "他有一顆善良的心",
+        "role": "依解析辨認主要述謂關係"
+      }
+    ],
+    "explanation": "「有」表示領有，「一顆善良的心」是賓語。",
+    "commonError": "先看全句主要述謂；引號題只分類指定部分，不能把修飾語內部的動詞當成全句述語。",
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": "90",
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供彙整清單標記 90-02。屬獨立改編練習，未宣稱此題幹即歷屆原題；原清單 A/B/C/D 代號已轉為遊戲統一排序。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 4,
+    "points": 2.5,
+    "drawGroup": "exam",
+    "correctAnswer": "B 有無句",
+    "examReferences": [
+      {
+        "year": "90",
+        "session": "2",
+        "number": "23",
+        "exam": "90年第二次基測第23題",
+        "url": "http://area.hcjh.tn.edu.tw/noise/bc/view.asp?articleid=20100821115528",
+        "verification": "校方歷屆網站保存頁已核對年代題號；未核官方原卷",
+        "method": "依教師清單對照；現題幹、選項與部分用詞為獨立改編"
+      }
+    ]
+  },
+  {
+    "id": "teacher-trap-gossip",
+    "stem": "不要只看「是」，請判斷全句的句型。",
+    "sentence": "不要搬弄是非。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "（你／你們）",
+        "role": "省略主語"
+      },
+      {
+        "text": "不要搬弄",
+        "role": "述語"
+      },
+      {
+        "text": "是非",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "省略主語「你／你們」，主要動詞是「搬弄」，「不要」表示禁止。「是非」是名詞，作賓語，不是連結主語與斷語的繫詞，因此是敘事句。",
+    "commonError": "不能把名詞「是非」中的「是」當成繫詞。",
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 5,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-narrative-must",
+    "sentence": "他非得親自完成任務。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "他",
+        "role": "主語"
+      },
+      {
+        "text": "非得",
+        "role": "副詞"
+      },
+      {
+        "text": "親自",
+        "role": "副詞"
+      },
+      {
+        "text": "完成",
+        "role": "述語"
+      },
+      {
+        "text": "任務",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "主要結構是「他／完成／任務」。「非得」表示必須、一定要，「親自」表示由本人來做，兩者都修飾主要動詞「完成」。全句主要敘述完成任務的行為，因此是敘事句。",
+    "commonError": "「非得」整體表示必須，不是用「非」否定身分類別的判斷結構。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 6,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-compared-68",
+    "stem": "依主要述謂關係判斷句型。",
+    "sentence": "人世間的是是非非極難分辨。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "人世間的是是非非極難分辨",
+        "role": "依解析辨認主要述謂關係"
+      }
+    ],
+    "explanation": "依教師指定改列敘事句，以「分辨」為主要動詞，「極難」修飾難易程度。",
+    "commonError": "先看全句主要述謂；引號題只分類指定部分，不能把修飾語內部的動詞當成全句述語。",
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": "97",
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供彙整清單標記 97-01。屬獨立改編練習，未宣稱此題幹即歷屆原題；原清單 A/B/C/D 代號已轉為遊戲統一排序。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 7,
+    "points": 2.5,
+    "drawGroup": "exam",
+    "correctAnswer": "A 敘事句",
+    "examReferences": [
+      {
+        "year": "97",
+        "session": "1",
+        "number": "13",
+        "exam": "97年第一次基測第13題",
+        "url": "http://area.hcjh.tn.edu.tw/noise/bc/view.asp?articleid=20160731195550",
+        "verification": "校方歷屆網站保存頁已核對年代題號；未核官方原卷",
+        "method": "依教師清單對照；現題幹、選項與部分用詞為獨立改編"
+      }
+    ]
+  },
+  {
+    "id": "teacher-narrative-crying",
+    "sentence": "他有時會躲在角落默默哭泣。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "他",
+        "role": "主語"
+      },
+      {
+        "text": "有時",
+        "role": "時間副詞"
+      },
+      {
+        "text": "會",
+        "role": "助動詞"
+      },
+      {
+        "text": "躲",
+        "role": "述語"
+      },
+      {
+        "text": "在角落",
+        "role": "處所詞組"
+      },
+      {
+        "text": "默默",
+        "role": "方式副詞"
+      },
+      {
+        "text": "哭泣",
+        "role": "述語"
+      }
+    ],
+    "explanation": "「他」是主語，全句主要敘述躲在角落、默默哭泣的行為。「有時」交代行為發生的時間或頻率，「會」是助動詞；主要動詞是「躲」「哭泣」，因此是敘事句。",
+    "commonError": "「有時」不是表示領有時間，而是修飾後面行為的時間副詞，不能拆出「有」判為有無句。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 8,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-narrative-finance-desire",
+    "sentence": "管財務的他對公司經費逐漸產生非分之想。",
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "管財務的他",
+        "role": "主語"
+      },
+      {
+        "text": "對公司經費",
+        "role": "介詞詞組／關涉對象"
+      },
+      {
+        "text": "逐漸",
+        "role": "副詞"
+      },
+      {
+        "text": "產生",
+        "role": "述語"
+      },
+      {
+        "text": "非分之想",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "完整主語是「管財務的他」，主要動詞是「產生」，賓語是「非分之想」。「對公司經費」交代所關涉的對象，「逐漸」修飾產生的過程。全句主要敘述產生想法的心理事件，因此是敘事句。",
+    "commonError": "「管財務的」在主語內修飾「他」，不是全句主要述語；「非分」修飾「想」，其中的「非」不是全句否定判斷詞。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 9,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-significant-impact",
+    "sentence": "這件事情的影響非同小可。",
+    "category": "表態句",
+    "components": [
+      {
+        "text": "這件事情的影響",
+        "role": "主語"
+      },
+      {
+        "text": "非同小可",
+        "role": "表語"
+      }
+    ],
+    "explanation": "「這件事情的影響」是主語，「非同小可」整體作表語，表示影響重大、不可輕忽。全句主要描述影響的性質，因此是主語＋表語的表態句。",
+    "commonError": "「非同小可」是整體描述性質的成語，不能只看到其中的「非」，就判為否定身分的判斷句。",
+    "stem": "依主要述謂關係判斷句型。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 10,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 表態句",
+    "examReferences": []
+  },
+  {
+    "category": "敘事句",
+    "commonError": "先找主要述語，再問「誰／什麼」發出動作；不要把修飾語或賓語當成主語。",
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "原創練習題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "原創已檢核",
+    "kind": "解剖",
+    "id": "subject-inverted-01",
+    "target": "倒裝主語",
+    "stem": "先還原正常語序，再找主語。",
+    "sentence": "出現了，那位守門人。",
+    "options": [
+      "出現",
+      "那位守門人",
+      "了",
+      "主語省略"
+    ],
+    "answer": 1,
+    "components": [
+      {
+        "text": "出現了",
+        "role": "述語"
+      },
+      {
+        "text": "那位守門人",
+        "role": "後置主語"
+      }
+    ],
+    "explanation": "正常語序為「那位守門人出現了」。出現的是「那位守門人」，所以它是後置的主語。",
+    "sourceNote": "關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 11,
+    "points": 2.5,
+    "drawGroup": "original",
+    "correctAnswer": "B 那位守門人",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-opportunity",
+    "sentence": "此乃千載難逢之機會。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "此",
+        "role": "主語"
+      },
+      {
+        "text": "乃",
+        "role": "繫詞"
+      },
+      {
+        "text": "千載難逢之機會",
+        "role": "斷語"
+      }
+    ],
+    "explanation": "「此」是主語，「乃」相當於「是」，將「此」判定為千載難逢的機會。「千載難逢之機會」整體作斷語，主要結構是主語＋繫詞＋斷語，因此是判斷句。",
+    "commonError": "「千載難逢」在斷語內修飾「機會」，不會把全句改成表態句；應看「此／乃／千載難逢之機會」的主要關係。",
+    "stem": "找出句中的斷語，擊破無言君護盾。",
+    "options": [
+      "此",
+      "乃",
+      "千載難逢之機會"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 12,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 千載難逢之機會",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-lesson-06",
+    "stem": "依主要述謂關係選出句型：A 敘事、B 有無、C 判斷、D 表態。",
+    "sentence": "不患人之不己知，患不知人也。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 0,
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "（吾）",
+        "role": "省略主語"
+      },
+      {
+        "text": "不患／患",
+        "role": "述語"
+      },
+      {
+        "text": "人之不己知／不知人",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "兩分句都省略「吾」。前句還原為「（吾）不患人之不知己」，後句為「（吾）患不知人也」；主要動詞是「患」（擔心），兩分句均為敘事。",
+    "commonError": "先找主要述謂；注意省略、倒裝及修飾語，不只看單一字詞。",
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "連擊",
+    "sourceNote": "教師提供課堂練習第 6 題；依指定分類，未虛構考試年份或原作出處。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 13,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "A 敘事句",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-lesson-04",
+    "stem": "先還原「父母唯憂其疾」，再選出前置賓語。",
+    "sentence": "父母唯其疾之憂。",
+    "options": [
+      "父母",
+      "唯",
+      "其疾",
+      "憂"
+    ],
+    "answer": 2,
+    "category": "敘事句",
+    "components": [
+      {
+        "text": "父母",
+        "role": "主語"
+      },
+      {
+        "text": "唯",
+        "role": "副詞"
+      },
+      {
+        "text": "其疾",
+        "role": "前置賓語"
+      },
+      {
+        "text": "憂",
+        "role": "述語"
+      }
+    ],
+    "explanation": "還原為「父母唯憂其疾」；父母只擔心子女的疾病。「其疾」是前置賓語，主要動詞是「憂」，因此是敘事句。",
+    "commonError": "先找主要述謂；注意省略、倒裝及修飾語，不只看單一字詞。",
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供課堂練習第 4 題；依指定分類，未虛構考試年份或原作出處。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 14,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 其疾",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-attribute-unlimited-items",
+    "sentence": "在遊戲中擁有無限道具的這件事情多麼棒！",
+    "category": "表態句",
+    "components": [
+      {
+        "text": "在遊戲中擁有無限道具的這件事情",
+        "role": "主語"
+      },
+      {
+        "text": "多麼",
+        "role": "程度副詞"
+      },
+      {
+        "text": "棒",
+        "role": "表語"
+      }
+    ],
+    "explanation": "全句主要表語是「棒」，描述「在遊戲中擁有無限道具的這件事情」的性質；「多麼」修飾程度。「擁有無限道具」位於主語內部，不是全句主要述語。因此是主語＋表語的表態句，感嘆語氣不改變基本句型。",
+    "commonError": "不能只看到主語內部的「擁有」就判為有無句，也不能把「無限」中的「無」當作全句主要述語。",
+    "difficulty": 2,
+    "stem": "找出句中的表語，擊破無言君護盾。",
+    "options": [
+      "在遊戲中擁有無限道具的這件事情",
+      "多麼",
+      "棒"
+    ],
+    "answer": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供原句與指定分類；歷屆出處依可核對的來源另列。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 15,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "C 棒",
+    "examReferences": []
+  },
+  {
+    "id": "teacher-judgement-rumor",
+    "sentence": "這個消息不是毫無根據的傳聞。",
+    "category": "判斷句",
+    "components": [
+      {
+        "text": "這個消息",
+        "role": "主語"
+      },
+      {
+        "text": "不",
+        "role": "否定副詞"
+      },
+      {
+        "text": "是",
+        "role": "繫詞"
+      },
+      {
+        "text": "毫無根據的傳聞",
+        "role": "斷語"
+      }
+    ],
+    "explanation": "「這個消息」是主語，「不」否定繫詞「是」，「毫無根據的傳聞」整體作斷語。全句否定將這個消息歸類為毫無根據的傳聞，主要結構是主語＋不是＋斷語，因此是判斷句。",
+    "commonError": "「毫無根據的」在斷語內修飾「傳聞」，其中的「無」不是全句主要述語；不能據此判為有無句。",
+    "stem": "找出句中的斷語，擊破無言君護盾。",
+    "options": [
+      "這個消息",
+      "不",
+      "是",
+      "毫無根據的傳聞"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "level": "四句審判殿",
+    "sourceType": "教師審核題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "教師已核准",
+    "kind": "解剖",
+    "sourceNote": "教師提供原句與指定分類；未提供考試出處，句中提及會考不代表本題來自會考原卷。 關卡互動引用已確認題庫；原始題庫與教師修正保留。",
+    "stage": "四句審判殿",
+    "stageNumber": 5,
+    "stageQuestion": 16,
+    "points": 2.5,
+    "drawGroup": "teacher",
+    "correctAnswer": "D 毫無根據的傳聞",
+    "examReferences": []
+  }
+]

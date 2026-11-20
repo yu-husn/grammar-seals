@@ -1,0 +1,9 @@
+import './setup';
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {useGame} from '../src/store';
+import {heroes,normalizeHero} from '../src/heroes';
+test('主角選擇只改外觀，不重設成績、道具、存檔或作答紀錄；戰鬥中禁止切換',()=>{const g=useGame.getState();useGame.setState({phase:'menu',hero:'shenmo',hp:70,step:3,seconds:140,grades:{'realm0:0':{questionId:'one',wrong:false,credit:1}},items:{step:1,shadow:2,time:1,strike:1,aegis:1,heal:1}});const before=useGame.getState();g.selectHero('suying');const after=useGame.getState();assert.equal(after.hero,'suying');for(const key of ['hp','step','seconds','grades','items','records','save'] as const)assert.deepEqual(after[key],before[key]);g.setPhase('play');g.selectHero('shenmo');assert.equal(useGame.getState().hero,'suying');g.setPhase('menu');g.selectHero('shenmo');assert.equal(useGame.getState().hero,'shenmo')});
+test('第四版舊存檔轉成第五版，預設沈墨且不丟失成績、道具與跨關進度',async()=>{const save={version:3,realm:2,step:3,seals:[0,1],hp:70,seconds:140,mistakes:2,combo:1,cleared:false};const previous={save,unlocked:3,grades:{'realm0:0':{questionId:'one',wrong:true,credit:.5}},items:{step:1,shadow:2,time:1},records:[{id:'one',category:'敘事句',sentence:'鳥飛。',correct:true,explanation:'動作',time:'now'}]};const migrated=await useGame.persist.getOptions().migrate!(previous,4);assert.equal(migrated.hero,'shenmo');for(const key of ['grades','records','unlocked'] as const)assert.deepEqual(migrated[key],previous[key]);assert.deepEqual(migrated.items,{...previous.items,strike:1,aegis:1,heal:1});assert.ok(migrated.save);assert.equal(migrated.save.realm,2);assert.equal(migrated.save.step,3);assert.deepEqual(migrated.save.seals,[0,1])});
+test('角色ID不接受守衛或無效資料，兩位玩家造型分離',()=>{assert.equal(normalizeHero('shadow'),'shenmo');assert.equal(normalizeHero(null),'shenmo');assert.equal(normalizeHero('suying'),'suying');assert.notEqual(heroes.shenmo.variant,heroes.suying.variant);assert.notEqual(heroes.shenmo.robe,heroes.suying.robe)});
+

@@ -1,0 +1,22 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local QA captures can contain browser saves and learning records.
+evidence/
+source-search*
+*.log
+.env*
+!.env.example
+.codex/
+.openai/
+
+# Keep only the current question-bank fixtures required by the tests.
+deliverables/*
+!deliverables/句型精選100題_含答案.json
+!deliverables/完整句型題庫_218題.json
+
+# Only portable build and preview tools are published.
+scripts/*
+!scripts/build-github-pages.mjs
+!scripts/serve-built.mjs

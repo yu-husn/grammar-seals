@@ -1,0 +1,5 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createBoard,possibleMove,swap,resolveGemFrames,matchCells,movesPerGemQuestion,blastCells} from '../src/gemEngine';
+test('三消交換後產生可播放的消除與掉落階段，最後盤面仍可操作',()=>{let seed=31;const random=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/2**32};for(let i=0;i<20;i++){const start=createBoard(random),move=possibleMove(start)!;assert.ok(move);const next=swap(start,...move)!;const result=resolveGemFrames(next,random);assert.ok(result.frames.length>0);assert.ok(result.cleared>=3);for(const f of result.frames){assert.equal(f.before.length,6);assert.equal(f.after.length,6);assert.ok(f.hits.length>=3);assert.ok(f.fall.flat().every(n=>n>=0&&n<=6))}assert.equal(matchCells(result.board).length,0);assert.ok(possibleMove(result.board))}});
+test('每三步合法消除才出題，連鎖不會冒充三步，爆破仍有完整掉落記錄',()=>{assert.equal(movesPerGemQuestion,3);const board=createBoard(),result=resolveGemFrames(board,Math.random,blastCells({r:2,c:3}));assert.equal(result.frames[0].hits.length,11);assert.ok(result.cleared>=11);assert.ok(result.frames[0].fall.flat().some(n=>n>0))});

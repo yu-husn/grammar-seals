@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "category": "敘事句",
+      "total": 64,
+      "userAdded": 25
+    },
+    {
+      "category": "表態句",
+      "total": 56,
+      "userAdded": 13
+    },
+    {
+      "category": "判斷句",
+      "total": 51,
+      "userAdded": 10
+    },
+    {
+      "category": "有無句",
+      "total": 47,
+      "userAdded": 10
+    }
+  ],
+  "total": 218,
+  "userAdded": 58
+}

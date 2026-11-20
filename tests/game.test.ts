@@ -1,0 +1,13 @@
+import './setup';
+import {test,beforeEach} from 'node:test';
+import assert from 'node:assert/strict';
+import {bank,validateQuestion,MISSION_LENGTH} from '../src/questions';
+import {adaptedBank} from '../src/adaptedQuestions';
+import {useGame} from '../src/store';
+beforeEach(()=>{useGame.setState({journeyCleared:[],grades:{},records:[],save:null,settings:{difficulty:'一般',countdown:true,seconds:200,chase:true,scares:false,audio:false,quality:'低'}});useGame.getState().start()});
+test('原創四類各30題、40個獨立選項題均有合法資料',()=>{assert.equal(bank.length,120);for(const c of ['敘事句','表態句','判斷句','有無句'])assert.equal(bank.filter(q=>q.category===c).length,30);assert.equal(adaptedBank.length,40);assert.equal(adaptedBank.filter(q=>q.reviewStatus==='待教師審核').length,2);for(const q of [...bank,...adaptedBank])assert.deepEqual(validateQuestion(q),[])});
+test('刪除的七題不會出現在拆解題中，改寫保留',()=>{for(const id of ['20100821115528','20100823084007','20100825175137','20160729225707','20160730143118','20160731151455','20160731195550'])assert.ok(!adaptedBank.some(q=>q.id.includes(id)));const q=adaptedBank.find(q=>q.id==='adapted-20160801060321-D')!;assert.equal(q.sentence,'他有一個溫暖的家。');assert.equal(q.category,'有無句')});
+test('答題、解析與暫停期間計時和怪物均停止',()=>{let g=useGame.getState();g.open();g.tick(8);g.hit();assert.equal(useGame.getState().seconds,200);assert.equal(useGame.getState().hp,100);g.answer(1);g.tick(8);g.hit();assert.equal(useGame.getState().hp,100);assert.equal(useGame.getState().seconds,200);useGame.setState({question:null,phase:'pause'});g.tick(8);g.hit();assert.equal(useGame.getState().seconds,200);assert.equal(useGame.getState().hp,100)});
+test('答錯不解鎖；補救重答才推進並自動存檔',()=>{let g=useGame.getState();g.open();const q=useGame.getState().question!;g.answer((q.answer+1)%q.options.length);g.next();assert.equal(useGame.getState().step,0);assert.equal(useGame.getState().feedback,null);assert.ok(useGame.getState().question);g.answer(q.answer);g.next();assert.equal(useGame.getState().step,1);assert.equal(useGame.getState().save?.step,1);assert.equal(useGame.getState().mistakes,1)});
+test('受傷直接扣10點生命、生命歸零失敗，計時歸零亦失敗',()=>{let g=useGame.getState();g.hit('spell');assert.equal(useGame.getState().hp,90);useGame.setState({hp:5});g.hit();assert.equal(useGame.getState().phase,'lose');g.start();g.tick(200);assert.equal(useGame.getState().phase,'lose')});
+test('必須完成六道封印，才能逃脫',()=>{let g=useGame.getState();g.escape();assert.equal(useGame.getState().phase,'play');for(let i=0;i<MISSION_LENGTH;i++){g.open();const q=useGame.getState().question!;g.answer(q.answer);g.next()}assert.equal(useGame.getState().step,6);g.escape();assert.equal(useGame.getState().phase,'realmClear');assert.deepEqual(useGame.getState().seals,[0])});
