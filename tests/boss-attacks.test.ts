@@ -1,15 +1,23 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {buildBossVolley,projectileCapacity} from '../src/bossAttacks';
-import {guardSpeed,guardDetectionRange} from '../src/realmDesign';
-test('四域怪物在相同難度下逐關提高速度，仍保留玩家逃生速度',()=>{for(const difficulty of ['一般','刺激','極限'] as const){let previous=0;for(let r=0;r<4;r++){const speed=guardSpeed(r,difficulty);assert.ok(speed>previous);assert.ok(speed<4.5);if(r>0)assert.ok(guardDetectionRange(r,1)>guardDetectionRange(r-1,1));previous=speed}assert.ok(guardSpeed(3,difficulty,30,true)<4.5)}});
+import {buildBossVolley,bossProjectileSpeed,projectileCapacity} from '../src/bossAttacks';
+import {guardSpeed,guardDetectionRange,maxGuardSpeed} from '../src/realmDesign';
+test('四域關主基準對應魔王砲彈逐階速度，後段可快於主角普通步速',()=>{
+ const reference=[[0,0],[4,0],[10,0],[10,16]];
+ for(let realm=0;realm<4;realm++){
+  const [step,volley]=reference[realm],shot=buildBossVolley(step,volley,{x:0,z:-1}).shots[0];
+  assert.ok(Math.abs(guardSpeed(realm,'一般')-Math.hypot(shot.vx,shot.vz))<1e-9);
+  if(realm){assert.ok(guardSpeed(realm,'一般')>guardSpeed(realm-1,'一般'));assert.ok(guardDetectionRange(realm,1)>guardDetectionRange(realm-1,1))}
+ }
+ assert.equal(guardSpeed(0,'一般'),3.1);assert.equal(guardSpeed(1,'一般'),3.8);assert.equal(guardSpeed(2,'一般'),4.5);assert.equal(guardSpeed(3,'一般'),4.9);
+});
 
-test('新增守衛後各難度正常追擊提速25%，六隻守衛最高速仍低於主角步速',()=>{
- const factors=[1,1.22,1.48,1.75];
- for(const [difficulty,base]of [['一般',.85],['刺激',1.35],['極限',1.9]] as const){
+test('各難度與反擊仍可提速，六隻守衛不超過魔王砲彈最高速度',()=>{
+ assert.equal(maxGuardSpeed,bossProjectileSpeed(15,100));
+ for(const difficulty of ['一般','刺激','極限'] as const){
   for(let realm=0;realm<4;realm++){
-   assert.ok(Math.abs(guardSpeed(realm,difficulty)-Math.min(4.15,base*factors[realm]*1.25))<1e-9);
-   for(let guard=0;guard<realm+3;guard++)assert.ok(guardSpeed(realm,difficulty,30,true,guard)<4.5);
+   assert.ok(guardSpeed(realm,difficulty)>=guardSpeed(realm,'一般'));
+   for(let guard=0;guard<realm+3;guard++){const speed=guardSpeed(realm,difficulty,30,true,guard);assert.ok(speed>=3.1&&speed<=maxGuardSpeed);assert.ok(guardSpeed(realm,difficulty,0,false,guard)<=speed)}
   }
  }
 });
