@@ -10,7 +10,7 @@ import {bossPlayerDamage,bossAnswerHeal,bossRescueHP,bossLearningHelp} from '../
 function beginBoss(){useGame.setState({phase:'menu'});useGame.getState().resetForNextStudent();const deck=useGame.getState().ensureQuestions();useGame.setState({unlocked:4,journeyCleared:journeyOrder.filter(s=>s!=='realm4'),grades:Object.fromEntries(Object.entries(deck.questions).filter(([key])=>/^realm[0-3]:/.test(key)).map(([key,q])=>[key,{questionId:q.id,wrong:false,credit:1 as const}]))});useGame.getState().start(false,4)}
 
 test('教學彈幕速度、數量、頻率與預警留出移動時間，後段仍逐題增加',()=>{
- assert.equal(bossPlayerDamage,10);assert.ok(!bossLearningHelp.includes('移動時間'));assert.ok(!bossLearningHelp.includes('受傷後有4秒'));
+ assert.equal(bossPlayerDamage,10);assert.ok(!bossLearningHelp.includes('移動時間'));assert.ok(!bossLearningHelp.includes('清除'));assert.ok(bossLearningHelp.includes('持續飛行'));assert.ok(!bossLearningHelp.includes('受傷後有4秒'));
  let previous=0;for(let step=0;step<16;step++){const plan=buildBossVolley(step,0,{x:0,z:6});assert.equal(plan.shots.length,12+step);assert.ok(plan.shots.length>previous);previous=plan.shots.length;assert.ok(plan.windup>=2.8);assert.ok(plan.interval>=8);for(const shot of plan.shots)assert.ok(Math.hypot(shot.vx,shot.vz)<=3.000001)}
  assert.equal(buildBossVolley(15,999,{x:0,z:0}).shots.length,32);assert.equal(bossProjectileLifetime,12);
 });
