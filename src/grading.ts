@@ -2,6 +2,7 @@ import {supplyCosts} from './itemPrices';
 
 export const pointsPerQuestion=2.5;
 export const scoredQuestionCount=40;
+export const passingScore=70;
 export function formatScore(value:number){return value.toFixed(2).replace(/\.?0+$/,'')}
 export const journeySections=[
   {id:'realm0',name:'行跡迷城',count:6,points:15},
@@ -27,6 +28,7 @@ export function gradeSummary(book:GradeBook){
   const sections=assessmentSections.map(s=>sectionGrade(book,s.id));
   return {sections,completed:sections.reduce((n,s)=>n+s.completed,0),score:sections.reduce((n,s)=>n+s.earned,0)};
 }
+export function assessmentResult(book:GradeBook){const summary=gradeSummary(book);return {...summary,passed:summary.completed===scoredQuestionCount&&summary.score>=passingScore,needed:Math.max(0,passingScore-summary.score)}}
 export function markAnswer(book:GradeBook,section:SectionId,index:number,questionId:string,correct:boolean){
   const definition=journeySections.find(s=>s.id===section);
   if(!definition||!Number.isInteger(index)||index<0||index>=definition.count)return {book,fresh:false};

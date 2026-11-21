@@ -39,6 +39,6 @@ test('下一位學生從第一關重新抽卷及計分，第一題首答2.5分�
 
 test('入口重新計分僅限主選單，遊玩、暫停與教師畫面不能誤清資料',()=>{
  const original=useGame.getState();try{
-  previousStudent();for(const phase of ['play','pause','teacher','gems','blast','realmClear','win','lose'] as const){useGame.setState({phase});const before=useGame.getState();before.resetForNextStudent();assert.equal(useGame.getState(),before)}
+  previousStudent();for(const phase of ['play','pause','teacher','gems','blast','realmClear','win','lose','notPassed'] as const){useGame.setState({phase});const before=useGame.getState();before.resetForNextStudent();assert.equal(useGame.getState(),before)}
  }finally{useGame.setState(original)}
 });
