@@ -2,12 +2,12 @@
   "rows": [
     {
       "category": "敘事句",
-      "total": 64,
+      "total": 63,
       "userAdded": 25
     },
     {
       "category": "表態句",
-      "total": 56,
+      "total": 45,
       "userAdded": 13
     },
     {
@@ -17,10 +17,10 @@
     },
     {
       "category": "有無句",
-      "total": 34,
+      "total": 30,
       "userAdded": 10
     }
   ],
-  "total": 191,
+  "total": 175,
   "userAdded": 58
 }

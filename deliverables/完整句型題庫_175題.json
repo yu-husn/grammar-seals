@@ -5981,47 +5981,6 @@
   {
     "category": "敘事句",
     "commonError": "先找主要述語，再問「誰／什麼」發出動作；不要把修飾語或賓語當成主語。",
-    "difficulty": 1,
-    "level": "尋主定印",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "解剖",
-    "id": "subject-omitted-01",
-    "target": "省略主語",
-    "stem": "判斷主語是否出現；若未出現，選出合理補入的主語。",
-    "sentence": "請推開城門。",
-    "options": [
-      "城門",
-      "請",
-      "主語省略，可補入「你／你們」",
-      "推開"
-    ],
-    "answer": 2,
-    "components": [
-      {
-        "text": "（你／你們）",
-        "role": "省略主語"
-      },
-      {
-        "text": "推開",
-        "role": "述語"
-      },
-      {
-        "text": "城門",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "這是請求對方行動的句子，主語「你／你們」省略。「城門」是被推開的對象，作賓語。",
-    "exportIndex": 139,
-    "examReferences": [],
-    "correctAnswer": "C　主語省略，可補入「你／你們」"
-  },
-  {
-    "category": "敘事句",
-    "commonError": "先找主要述語，再問「誰／什麼」發出動作；不要把修飾語或賓語當成主語。",
     "difficulty": 2,
     "level": "尋主定印",
     "sourceType": "原創練習題",
@@ -6052,7 +6011,7 @@
       }
     ],
     "explanation": "正常語序為「那位守門人出現了」。出現的是「那位守門人」，所以它是後置的主語。",
-    "exportIndex": 140,
+    "exportIndex": 139,
     "examReferences": [],
     "correctAnswer": "B　那位守門人"
   },
@@ -6086,7 +6045,7 @@
     "kind": "辨識",
     "originalOption": "C",
     "sourceNote": "93年第一次基測第34題 選項 C；拆解為獨立分類題，非原試題題幹。",
-    "exportIndex": 141,
+    "exportIndex": 140,
     "examReferences": [
       {
         "year": "93",
@@ -6130,7 +6089,7 @@
     "kind": "辨識",
     "originalOption": "A",
     "sourceNote": "98年第一次基測第14題 選項 A；拆解為獨立分類題，非原試題題幹。",
-    "exportIndex": 142,
+    "exportIndex": 141,
     "examReferences": [
       {
         "year": "98",
@@ -6174,7 +6133,7 @@
     "kind": "辨識",
     "originalOption": "B",
     "sourceNote": "98年第一次基測第14題 選項 B；拆解為獨立分類題，非原試題題幹。",
-    "exportIndex": 143,
+    "exportIndex": 142,
     "examReferences": [
       {
         "year": "98",
@@ -6218,7 +6177,7 @@
     "kind": "辨識",
     "originalOption": "C",
     "sourceNote": "98年第一次基測第14題 選項 C；拆解為獨立分類題，非原試題題幹。",
-    "exportIndex": 144,
+    "exportIndex": 143,
     "examReferences": [
       {
         "year": "98",
@@ -6262,7 +6221,7 @@
     "kind": "辨識",
     "originalOption": "D",
     "sourceNote": "98年第一次基測第14題 選項 D；拆解為獨立分類題，非原試題題幹。",
-    "exportIndex": 145,
+    "exportIndex": 144,
     "examReferences": [
       {
         "year": "98",
@@ -6312,7 +6271,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 146,
+    "exportIndex": 145,
     "examReferences": [],
     "correctAnswer": "A　敘事句"
   },
@@ -6352,7 +6311,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 147,
+    "exportIndex": 146,
     "examReferences": [],
     "correctAnswer": "A　敘事句"
   },
@@ -6388,7 +6347,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 148,
+    "exportIndex": 147,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6424,7 +6383,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 149,
+    "exportIndex": 148,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6460,7 +6419,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 150,
+    "exportIndex": 149,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6496,7 +6455,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 151,
+    "exportIndex": 150,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6532,43 +6491,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 152,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-5",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "石階濕滑。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "石階",
-        "role": "主語"
-      },
-      {
-        "text": "濕滑",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「濕滑」描述「石階」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 153,
+    "exportIndex": 151,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6604,43 +6527,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 154,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-7",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "天空晴朗。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "天空",
-        "role": "主語"
-      },
-      {
-        "text": "晴朗",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「晴朗」描述「天空」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 155,
+    "exportIndex": 152,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6676,115 +6563,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 156,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-9",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "花朵鮮豔。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "花朵",
-        "role": "主語"
-      },
-      {
-        "text": "鮮豔",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「鮮豔」描述「花朵」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 157,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-10",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "道路寬闊。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "道路",
-        "role": "主語"
-      },
-      {
-        "text": "寬闊",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「寬闊」描述「道路」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 158,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-11",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "城牆高大。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "城牆",
-        "role": "主語"
-      },
-      {
-        "text": "高大",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「高大」描述「城牆」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 159,
+    "exportIndex": 153,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6820,79 +6599,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 160,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-13",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "茶水滾燙。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "茶水",
-        "role": "主語"
-      },
-      {
-        "text": "滾燙",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「滾燙」描述「茶水」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 161,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-14",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "風聲尖銳。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "風聲",
-        "role": "主語"
-      },
-      {
-        "text": "尖銳",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「尖銳」描述「風聲」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 162,
+    "exportIndex": 154,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6928,7 +6635,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 163,
+    "exportIndex": 155,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -6964,7 +6671,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 164,
+    "exportIndex": 156,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -7000,43 +6707,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 165,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-18",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "腳步聲急促。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "腳步聲",
-        "role": "主語"
-      },
-      {
-        "text": "急促",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「急促」描述「腳步聲」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 166,
+    "exportIndex": 157,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -7072,7 +6743,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 167,
+    "exportIndex": 158,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -7108,7 +6779,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 168,
+    "exportIndex": 159,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -7144,43 +6815,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 169,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-24",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "空氣潮濕。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "空氣",
-        "role": "主語"
-      },
-      {
-        "text": "潮濕",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「潮濕」描述「空氣」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 170,
+    "exportIndex": 160,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -7216,79 +6851,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 171,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-27",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "視線模糊。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "視線",
-        "role": "主語"
-      },
-      {
-        "text": "模糊",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「模糊」描述「視線」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 172,
-    "examReferences": [],
-    "correctAnswer": "D　表態句"
-  },
-  {
-    "id": "original-1-29",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "晚霞絢麗。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 3,
-    "category": "表態句",
-    "components": [
-      {
-        "text": "晚霞",
-        "role": "主語"
-      },
-      {
-        "text": "絢麗",
-        "role": "表語"
-      }
-    ],
-    "explanation": "「絢麗」描述「晚霞」的性質或狀態，是主要表語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 173,
+    "exportIndex": 161,
     "examReferences": [],
     "correctAnswer": "D　表態句"
   },
@@ -7328,7 +6891,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 174,
+    "exportIndex": 162,
     "examReferences": [],
     "correctAnswer": "C　判斷句"
   },
@@ -7368,7 +6931,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 175,
+    "exportIndex": 163,
     "examReferences": [],
     "correctAnswer": "C　判斷句"
   },
@@ -7408,7 +6971,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 176,
+    "exportIndex": 164,
     "examReferences": [],
     "correctAnswer": "C　判斷句"
   },
@@ -7448,7 +7011,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 177,
+    "exportIndex": 165,
     "examReferences": [],
     "correctAnswer": "C　判斷句"
   },
@@ -7488,7 +7051,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 178,
+    "exportIndex": 166,
     "examReferences": [],
     "correctAnswer": "C　判斷句"
   },
@@ -7528,7 +7091,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 179,
+    "exportIndex": 167,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7568,47 +7131,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 180,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-3",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "寶庫裡有一枚靈印。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "寶庫裡",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一枚靈印",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一枚靈印」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 181,
+    "exportIndex": 168,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7648,47 +7171,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 182,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-8",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "村中有一位醫師。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "村中",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一位醫師",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一位醫師」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 183,
+    "exportIndex": 169,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7728,7 +7211,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 184,
+    "exportIndex": 170,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7768,47 +7251,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 185,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-12",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "山上有一座古寺。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "山上",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一座古寺",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一座古寺」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 186,
+    "exportIndex": 171,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7848,7 +7291,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 187,
+    "exportIndex": 172,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7888,7 +7331,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 188,
+    "exportIndex": 173,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7928,7 +7371,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 189,
+    "exportIndex": 174,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -7968,47 +7411,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 190,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-23",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "村裡沒有學校。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "村裡",
-        "role": "主語"
-      },
-      {
-        "text": "沒有",
-        "role": "述語"
-      },
-      {
-        "text": "學校",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「沒有」表示「學校」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 2,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 191,
+    "exportIndex": 175,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   }

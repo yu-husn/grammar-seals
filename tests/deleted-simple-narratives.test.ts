@@ -10,7 +10,7 @@ const deleted=[['original-0-2','學生走進教室'],['original-0-6','船夫划�
 test('指定12題以ID及句子排除，已核准匯入及標點變體均不能復活',()=>{
  const pool=getPracticeQuestions();for(const [id,sentence] of deleted){assert.ok(deletedQuestionIds.includes(id));assert.ok(isDeletedSentence(sentence+'。'));assert.ok(!pool.some(q=>q.id===id||q.sentence===sentence+'。'));
  const imported={...pool[0],id:'import-'+id,sentence:'「'+sentence+'！」',reviewStatus:'教師已核准' as const};assert.ok(!getPracticeQuestions([imported]).some(q=>q.id===imported.id))}
- const counts=getQuestionCounts();assert.equal(counts.total,191);assert.equal(counts.userAdded,58);assert.equal(counts.rows.find(r=>r.category==='敘事句')!.total,64);
+ const counts=getQuestionCounts();assert.equal(counts.total,175);assert.equal(counts.userAdded,58);assert.equal(counts.rows.find(r=>r.category==='敘事句')!.total,63);
 });
 test('被刪除的舊補給待答槽換題保留補救旗標，固定40題仍合法',()=>{
  const originalGrades=useGame.getState().grades;

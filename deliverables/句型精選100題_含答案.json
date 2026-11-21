@@ -4349,7 +4349,7 @@
     "kind": "辨識",
     "originalOption": "C",
     "sourceNote": "98年第一次基測第14題 選項 C；拆解為獨立分類題，非原試題題幹。",
-    "exportIndex": 144,
+    "exportIndex": 143,
     "examReferences": [
       {
         "year": "98",
@@ -4401,7 +4401,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 179,
+    "exportIndex": 167,
     "examReferences": [],
     "correctAnswer": "B　有無句",
     "selectedNumber": 97,
@@ -4443,52 +4443,10 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 180,
+    "exportIndex": 168,
     "examReferences": [],
     "correctAnswer": "B　有無句",
     "selectedNumber": 98,
-    "bossReserved": false
-  },
-  {
-    "id": "original-3-3",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "寶庫裡有一枚靈印。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "寶庫裡",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一枚靈印",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一枚靈印」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 181,
-    "examReferences": [],
-    "correctAnswer": "B　有無句",
-    "selectedNumber": 99,
     "bossReserved": false
   },
   {
@@ -4527,7 +4485,49 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 182,
+    "exportIndex": 169,
+    "examReferences": [],
+    "correctAnswer": "B　有無句",
+    "selectedNumber": 99,
+    "bossReserved": false
+  },
+  {
+    "id": "original-3-9",
+    "stem": "這道封印上的句子屬於哪一種句型？",
+    "sentence": "這間屋子沒有窗戶。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 1,
+    "category": "有無句",
+    "components": [
+      {
+        "text": "這間屋子",
+        "role": "主語"
+      },
+      {
+        "text": "沒有",
+        "role": "述語"
+      },
+      {
+        "text": "窗戶",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "「沒有」表示「窗戶」的存在、領有或欠缺，是主要述語。",
+    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
+    "difficulty": 2,
+    "level": "行跡迷城",
+    "sourceType": "原創練習題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "原創已檢核",
+    "kind": "辨識",
+    "exportIndex": 170,
     "examReferences": [],
     "correctAnswer": "B　有無句",
     "selectedNumber": 100,

@@ -6,9 +6,9 @@ import {validateQuestion} from '../src/questions';
 import {questionDrawGroup} from '../src/questionPriority';
 test('十八道文言教師題依指定分類進入正式優先題池，來源不冒標考試',()=>{
  assert.deepEqual(added.map(q=>q.category),['表態句','判斷句','表態句','敘事句','有無句','敘事句','敘事句','判斷句','敘事句','表態句','敘事句','有無句','有無句','表態句','敘事句','敘事句','有無句','判斷句']);
- const all=getPracticeQuestions();assert.equal(all.length,191);
+ const all=getPracticeQuestions();assert.equal(all.length,175);
  for(const q of added){assert.equal(all.filter(r=>r.id===q.id).length,1);assert.equal(q.options[q.answer],q.category);assert.deepEqual(validateQuestion(q),[]);assert.equal(questionDrawGroup(q),'teacher');assert.equal(q.examYear,null);assert.equal(q.examNumber,null);assert.equal(q.sourceUrl,'');assert.ok(q.explanation.length>35);assert.ok(q.components.length>=2)}
- assert.deepEqual(['敘事句','表態句','判斷句','有無句'].map(c=>all.filter(q=>q.category===c).length),[64,56,37,34]);
+ assert.deepEqual(['敘事句','表態句','判斷句','有無句'].map(c=>all.filter(q=>q.category===c).length),[63,45,37,30]);
 });
 test('乃與為依語境說明功能，括號補說、截句、省略及處所成分明示',()=>{
  const byId=(id:string)=>added.find(q=>q.id===id)!;

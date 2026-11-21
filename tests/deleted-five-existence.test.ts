@@ -10,7 +10,7 @@ import {useGame} from '../src/store';
 
 const removed=bank.filter(q=>['original-3-25','original-3-26','original-3-27','original-3-28','original-3-29'].includes(q.id));
 test('指定第214至218題全數排除，同句核准匯入和標點變體亦不能重新出題',()=>{
- assert.equal(removed.length,5);const pool=getPracticeQuestions();assert.equal(pool.length,191);
+ assert.equal(removed.length,5);const pool=getPracticeQuestions();assert.equal(pool.length,175);
  for(const q of removed){assert.ok(deletedQuestionIds.includes(q.id));assert.ok(isDeletedSentence(q.sentence));assert.ok(!pool.some(p=>p.id===q.id));const copy={...q,id:'import-'+q.id,sentence:`「${q.sentence.replace('。','')}！」`,reviewStatus:'教師已核准' as const};assert.ok(!getPracticeQuestions([copy]).some(p=>p.id===copy.id))}
  for(let seed=1;seed<=20;seed++){let n=seed;const deck=createQuestionDeck({},()=>((n=(n*1664525+1013904223)>>>0)/2**32));assert.ok(isQuestionDeck(deck));const rows=Object.values(deck.questions);assert.equal(rows.length,54);assert.equal(new Set(rows.map(q=>sentenceKey(q.sentence))).size,54);assert.ok(rows.every(q=>!isDeletedSentence(q.sentence)))}
 });
