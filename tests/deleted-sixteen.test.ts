@@ -11,8 +11,8 @@ import {useGame} from '../src/store';
 
 const sentences=['請推開城門','石階濕滑','天空晴朗','花朵鮮豔','道路寬闊','城牆高大','茶水滾燙','風聲尖銳','腳步聲急促','空氣潮濕','視線模糊','晚霞絢麗','寶庫裡有一枚靈印','村中有一位醫師','山上有一座古寺','村裡沒有學校'];
 const removed=[...bank,...subjectChallenges].filter(q=>sentences.includes(sentenceKey(q.sentence)));
-test('指定16題與同句匯入排除，包含省略主語題，175題池仍可產生54道不重複題卷',()=>{
- assert.equal(removed.length,16);assert.equal(removed.filter(q=>q.category==='表態句').length,11);assert.equal(removed.filter(q=>q.category==='有無句').length,4);const pool=getPracticeQuestions();assert.equal(pool.length,175);assert.ok(!pool.some(q=>q.id==='subject-omitted-01'));
+test('指定16題與同句匯入排除，包含省略主語題，170題池仍可產生54道不重複題卷',()=>{
+ assert.equal(removed.length,16);assert.equal(removed.filter(q=>q.category==='表態句').length,11);assert.equal(removed.filter(q=>q.category==='有無句').length,4);const pool=getPracticeQuestions();assert.equal(pool.length,170);assert.ok(!pool.some(q=>q.id==='subject-omitted-01'));
  for(const q of removed){assert.ok(deletedQuestionIds.includes(q.id));assert.ok(isDeletedSentence(q.sentence));assert.ok(!pool.some(p=>p.id===q.id));const copy={...q,id:'import-'+q.id,sentence:`「${q.sentence.replace('。','')}！」`,reviewStatus:'教師已核准' as const};assert.ok(!getPracticeQuestions([copy]).some(p=>p.id===copy.id))}
  for(let seed=1;seed<=30;seed++){let n=seed;const deck=createQuestionDeck({},()=>((n=(n*1664525+1013904223)>>>0)/2**32)),rows=Object.values(deck.questions);assert.ok(isQuestionDeck(deck));assert.equal(rows.length,54);assert.equal(new Set(rows.map(q=>sentenceKey(q.sentence))).size,54);assert.ok(rows.every(q=>!isDeletedSentence(q.sentence)))}
 });
