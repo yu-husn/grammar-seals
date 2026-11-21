@@ -4,7 +4,7 @@ export type SupplyId='gems'|'blast';
 export type SupplySnapshot={seconds:number;answered:number;score:number;combo:number;board?:number[][];moves?:number;freeMoves?:number;questionId?:string|null;result?:boolean|null;picked?:number|null;wrong?:boolean;paused?:boolean;mode?:'click'|'type';stage?:'paused'|'fire'|'explain'|'done';correct?:boolean;target?:number|null};
 export type SupplyBank={earned:number;spent:number;claims:string[];attempt?:{finished:boolean;snapshot?:SupplySnapshot}};
 export type SupplyBanks=Record<SupplyId,SupplyBank>;
-export const supplyCosts:Record<ItemId,number>={step:30,shadow:40,time:30,strike:40,aegis:50,heal:30};
+export {supplyCosts} from './itemPrices';
 export const freshSupplyBanks=():SupplyBanks=>({gems:{earned:0,spent:0,claims:[]},blast:{earned:0,spent:0,claims:[]}});
 export function normalizeSupplyBanks(raw:unknown):SupplyBanks{
  const banks=freshSupplyBanks();if(!raw||typeof raw!=='object')return banks;

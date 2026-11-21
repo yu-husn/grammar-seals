@@ -45,9 +45,9 @@ test('金鐘罩研讀、解析、暫停停止計時，倒數停用時保護仍�
 test('保護剩餘秒數隨存檔續行，重試不重發道具、不重置為8秒',()=>{
  const g=useGame.getState();g.useItem('aegis');g.tick(2);g.setPhase('menu');g.start(true);assert.equal(useGame.getState().aegisSeconds,6);assert.equal(useGame.getState().items.aegis,0);g.retry();assert.equal(useGame.getState().aegisSeconds,0);assert.equal(useGame.getState().items.aegis,0);
 });
-test('補給以40點與50點兌換道具，數量超過2仍可購買，沒有學科加分',()=>{
+test('補給以15點與20點兌換道具，數量超過2仍可購買，沒有學科加分',()=>{
  const g=useGame.getState();useGame.setState({phase:'gems',journeyCleared:['realm0'],supplyBanks:freshSupplyBanks(),items:{...freshItems(),strike:9,aegis:7}});g.awardSupplyPoints('gems','earned',100);
- assert.equal(g.buySupplyItem('gems','strike'),true);assert.equal(g.buySupplyItem('gems','aegis'),true);assert.equal(useGame.getState().items.strike,10);assert.equal(useGame.getState().items.aegis,8);assert.equal(useGame.getState().supplyBanks.gems.spent,90);assert.equal(gradeSummary(useGame.getState().grades).score,0);
+ assert.equal(g.buySupplyItem('gems','strike'),true);assert.equal(g.buySupplyItem('gems','aegis'),true);assert.equal(useGame.getState().items.strike,10);assert.equal(useGame.getState().items.aegis,8);assert.equal(useGame.getState().supplyBanks.gems.spent,35);assert.equal(gradeSummary(useGame.getState().grades).score,0);
 });
 
 test('魔王戰誅邪彈清咒事件不削減魔王生命，金鐘罩擋咒彈不改題數',()=>{
@@ -60,6 +60,6 @@ test('延命丹滿血不消耗，恢復20點並上限100，保存至續玩且不
 test('延命丹研讀、暫停與失敗時不消耗，無法用來復活',()=>{
  const g=useGame.getState();useGame.setState({hp:70});g.open();g.useItem('heal');assert.equal(useGame.getState().hp,70);useGame.setState({question:null});g.setPhase('pause');g.useItem('heal');assert.equal(useGame.getState().items.heal,1);useGame.setState({phase:'lose',hp:0});g.useItem('heal');assert.equal(useGame.getState().hp,0);assert.equal(useGame.getState().items.heal,1);
 });
-test('延命丹可用30補給積分兌換，帶入一般關卡恢復生命',()=>{
- const g=useGame.getState();useGame.setState({phase:'gems',journeyCleared:['realm0'],supplyBanks:freshSupplyBanks()});g.awardSupplyPoints('gems','earned',30);assert.equal(g.buySupplyItem('gems','heal'),true);assert.equal(useGame.getState().supplyBanks.gems.spent,30);assert.equal(useGame.getState().items.heal,2);useGame.setState({phase:'play',realm:1,hp:60});g.useItem('heal');assert.equal(useGame.getState().hp,80);assert.equal(useGame.getState().items.heal,1);
+test('延命丹可用15補給積分兌換，帶入一般關卡恢復生命',()=>{
+ const g=useGame.getState();useGame.setState({phase:'gems',journeyCleared:['realm0'],supplyBanks:freshSupplyBanks()});g.awardSupplyPoints('gems','earned',15);assert.equal(g.buySupplyItem('gems','heal'),true);assert.equal(useGame.getState().supplyBanks.gems.spent,15);assert.equal(useGame.getState().items.heal,2);useGame.setState({phase:'play',realm:1,hp:60});g.useItem('heal');assert.equal(useGame.getState().hp,80);assert.equal(useGame.getState().items.heal,1);
 });
