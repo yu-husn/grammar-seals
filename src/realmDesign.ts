@@ -1,14 +1,14 @@
 export const realmDesigns = [
-  { scene: '雨夜荒城', mechanism: '行跡輪與雙閘城道', result: '行動紀錄復原、足跡亮起；完成第3、6處機關，分別打開兩道閘門。', danger: '三名巡夜影衛從城門追入街巷。', floor: '#486573', fog: '#172b3b', accent: '#8ad5dd', ambient: .72, sky: '#8496b1', light: 2.6 },
-  { scene: '碎鏡迴廊', mechanism: '照影鏡與三重閘門', result: '照影鏡復原；完成第2、4、6處機關，依序打開三道幻鏡閘門。', danger: '四名鏡面仕女從入口追入鏡廊。', floor: '#514f70', fog: '#25233e', accent: '#bdabff', ambient: .72, sky: '#9eacd0', light: 2.6 },
-  { scene: '赤燭審判殿', mechanism: '證詞天秤與四重判門', result: '天秤歸正、法印點亮；完成第2、3、5、6處機關，依序開啟四道判門。', danger: '五名喪屍判官由殿門追入審判庭。', floor: '#674f55', fog: '#362630', accent: '#ecc17c', ambient: .72, sky: '#b7a0a7', light: 2.6 },
-  { scene: '深淵懸浮寶庫', mechanism: '虛實寶匣與凝光石橋', result: '完成第1、2、4、5、6處機關，開啟五道閘門並凝成石橋。', danger: '六名虛藏守將從入口追入寶庫。', floor: '#386665', fog: '#163e45', accent: '#8cebc9', ambient: .72, sky: '#83b6bd', light: 2.6 },
+  { scene: '雨夜荒城', mechanism: '行跡輪與雙閘城道', result: '行動紀錄復原、足跡亮起；完成第3、6處機關，分別打開兩道閘門。', danger: '一名巡夜影衛從城門追入街巷。', floor: '#486573', fog: '#172b3b', accent: '#8ad5dd', ambient: .72, sky: '#8496b1', light: 2.6 },
+  { scene: '碎鏡迴廊', mechanism: '照影鏡與三重閘門', result: '照影鏡復原；完成第2、4、6處機關，依序打開三道幻鏡閘門。', danger: '兩名鏡面仕女從入口追入鏡廊。', floor: '#514f70', fog: '#25233e', accent: '#bdabff', ambient: .72, sky: '#9eacd0', light: 2.6 },
+  { scene: '赤燭審判殿', mechanism: '證詞天秤與四重判門', result: '天秤歸正、法印點亮；完成第2、3、5、6處機關，依序開啟四道判門。', danger: '三名喪屍判官由殿門追入審判庭。', floor: '#674f55', fog: '#362630', accent: '#ecc17c', ambient: .72, sky: '#b7a0a7', light: 2.6 },
+  { scene: '深淵懸浮寶庫', mechanism: '虛實寶匣與凝光石橋', result: '完成第1、2、4、5、6處機關，開啟五道閘門並凝成石橋。', danger: '四名虛藏守將從入口追入寶庫。', floor: '#386665', fog: '#163e45', accent: '#8cebc9', ambient: .72, sky: '#83b6bd', light: 2.6 },
 ];
 
 export const barrierZ = [3, -2, -8, -13, -18, -23];
-export const monsterCounts=[3,4,5,6];
-export const maxGuardCount=6;
-export function monsterCountForRealm(realm:number){return realm===4?1:monsterCounts[realm]??3}
+export const monsterCounts=[1,2,3,4];
+export const maxGuardCount=4;
+export function monsterCountForRealm(realm:number){return realm===4?1:monsterCounts[realm]??1}
 // Fixed pursuit pace for every guardian in a realm, independent of answers or difficulty.
 export const realmGuardSpeeds=[2.1,2.3,2.6,2.9];
 export const maxGuardSpeed=Math.max(...realmGuardSpeeds);

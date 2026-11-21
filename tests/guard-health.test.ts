@@ -6,18 +6,18 @@ import {freshGuardHealth,normalizeGuardHealth,maxGuardHealth,strikeDamage} from 
 import {layoutHealthLabels} from '../src/healthLabelLayout';
 import {normalizeItems,freshItems,gradeSummary} from '../src/grading';
 beforeEach(()=>{useGame.setState({phase:'menu'});useGame.getState().resetAssessment();useGame.setState({unlocked:0,realm:0});useGame.getState().configure({chase:true,countdown:true});useGame.getState().start()});
-test('四域怪物生命20、30、40、50，數量依序3、4、5、6，誅邪彈傷害20',()=>{
- assert.equal(strikeDamage,20);for(let r=0;r<4;r++){assert.equal(maxGuardHealth(r),20+r*10);assert.deepEqual(freshGuardHealth(r),Array(r+3).fill(20+r*10))}assert.deepEqual(freshGuardHealth(4),[]);
+test('四域怪物生命20、30、40、50，數量依序1、2、3、4，誅邪彈傷害20',()=>{
+ assert.equal(strikeDamage,20);for(let r=0;r<4;r++){assert.equal(maxGuardHealth(r),20+r*10);assert.deepEqual(freshGuardHealth(r),Array(r+1).fill(20+r*10))}assert.deepEqual(freshGuardHealth(4),[]);
 });
 test('誅邪彈每個目標只傷害一次，生命歸零不能再作為攻擊目標',()=>{
- const g=useGame.getState();useGame.setState({realm:1,guardHP:[30,10,0],items:{...freshItems(),strike:4}});g.useItem('strike');assert.equal(g.resolveAttack(useGame.getState().attackRequest,[0,0,1,2,-1,99]),true);assert.deepEqual(useGame.getState().guardHP,[10,0,0]);assert.equal(useGame.getState().attackResult.defeated,1);assert.equal(useGame.getState().attackResult.hits,2);assert.equal(useGame.getState().items.strike,3);
+ const g=useGame.getState();useGame.setState({realm:2,guardHP:[30,10,0],items:{...freshItems(),strike:4}});g.useItem('strike');assert.equal(g.resolveAttack(useGame.getState().attackRequest,[0,0,1,2,-1,99]),true);assert.deepEqual(useGame.getState().guardHP,[10,0,0]);assert.equal(useGame.getState().attackResult.defeated,1);assert.equal(useGame.getState().attackResult.hits,2);assert.equal(useGame.getState().items.strike,3);
  g.useItem('strike');assert.equal(g.resolveAttack(useGame.getState().attackRequest,[1,2]),false);assert.equal(useGame.getState().items.strike,3);assert.equal(gradeSummary(useGame.getState().grades).score,0);
 });
 test('怪物受傷與擊倒寫入存檔，暫停、讀題、續行不回血，重試當域才重置',()=>{
- const g=useGame.getState();g.useItem('strike');g.resolveAttack(useGame.getState().attackRequest,[0]);assert.deepEqual(useGame.getState().guardHP,[0,20,20]);assert.deepEqual(useGame.getState().save?.guardHP,[0,20,20]);g.open();g.tick(3);assert.deepEqual(useGame.getState().guardHP,[0,20,20]);useGame.setState({question:null});g.setPhase('menu');g.start(true);assert.deepEqual(useGame.getState().guardHP,[0,20,20]);g.retry();assert.deepEqual(useGame.getState().guardHP,[20,20,20]);assert.equal(useGame.getState().items.strike,0);
+ const g=useGame.getState();g.useItem('strike');g.resolveAttack(useGame.getState().attackRequest,[0]);assert.deepEqual(useGame.getState().guardHP,[0]);assert.deepEqual(useGame.getState().save?.guardHP,[0]);g.open();g.tick(3);assert.deepEqual(useGame.getState().guardHP,[0]);useGame.setState({question:null});g.setPhase('menu');g.start(true);assert.deepEqual(useGame.getState().guardHP,[0]);g.retry();assert.deepEqual(useGame.getState().guardHP,[20]);assert.equal(useGame.getState().items.strike,0);
 });
 test('舊存檔補入正確怪物生命，死亡0不被預設值覆蓋，過高及非法值修正',async()=>{
- assert.deepEqual(normalizeGuardHealth(2,[0,20,999,NaN]),[0,20,40,40,40]);assert.deepEqual(migrateSave({realm:3,step:1,version:3})?.guardHP,[50,50,50,50,50,50]);const migrated=await useGame.persist.getOptions().migrate!({save:{version:3,realm:1,step:1,guardHP:[0,10,30]},items:{step:12,shadow:8,time:4,strike:5,aegis:3,heal:7}},10) as ReturnType<typeof useGame.getState>;assert.deepEqual(migrated.save?.guardHP,[0,10,30,30]);assert.equal(migrated.items.step,12);assert.equal(migrated.items.heal,7);
+ assert.deepEqual(normalizeGuardHealth(2,[0,20,999,NaN]),[0,20,40]);assert.deepEqual(migrateSave({realm:3,step:1,version:3})?.guardHP,[50,50,50,50]);const migrated=await useGame.persist.getOptions().migrate!({save:{version:3,realm:1,step:1,guardHP:[0,10,30]},items:{step:12,shadow:8,time:4,strike:5,aegis:3,heal:7}},10) as ReturnType<typeof useGame.getState>;assert.deepEqual(migrated.save?.guardHP,[0,10]);assert.equal(migrated.items.step,12);assert.equal(migrated.items.heal,7);
 });
 test('背包不截斷大於2的數量，非法數量仍不能成為負數或無限值',()=>{
  assert.deepEqual(normalizeItems({step:250,shadow:3.9,time:-1,strike:9,aegis:Infinity,heal:12345}),{step:250,shadow:3,time:0,strike:9,aegis:0,heal:12345});

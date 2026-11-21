@@ -12,7 +12,7 @@ test('舊背包保留三種道具，新道具只補一次，已耗盡的新道�
  assert.deepEqual(normalizeItems({...g.items,strike:0,aegis:0,heal:1}),{step:2,shadow:1,time:0,strike:0,aegis:0,heal:1});
 });
 test('誅邪彈只在實際命中後扣一次，空發與重複處理不扣道具或成績',()=>{
- const g=useGame.getState();g.useItem('strike');let request=useGame.getState().attackRequest;
+ const g=useGame.getState();useGame.setState({realm:1,guardHP:[30,30]});g.useItem('strike');let request=useGame.getState().attackRequest;
  assert.equal(g.resolveAttack(request,0),false);assert.equal(useGame.getState().items.strike,1);
  g.useItem('strike');request=useGame.getState().attackRequest;g.useItem('strike');assert.equal(useGame.getState().attackRequest,request);
  assert.equal(g.resolveAttack(request,[0,1]),true);assert.equal(g.resolveAttack(request,2),false);assert.equal(useGame.getState().items.strike,0);

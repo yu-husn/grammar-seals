@@ -9,7 +9,7 @@ test('第11版護盾存檔遷移後保留生命、成績、道具、金鐘罩時
  const migrated=await useGame.persist.getOptions().migrate!(previous,11) as ReturnType<typeof useGame.getState>;
  assert.equal('shield' in migrated,false);assert.equal('shield' in migrated.save!,false);
  assert.equal(migrated.save?.version,4);assert.equal(migrated.save?.hp,70);assert.equal(migrated.save?.seconds,126);assert.equal(migrated.save?.step,2);
- assert.deepEqual(migrated.save?.guardHP,[0,10,30,30]);assert.deepEqual(migrated.grades,previous.grades);assert.deepEqual(migrated.items,previous.items);assert.deepEqual(migrated.journeyCleared,previous.journeyCleared);assert.equal(migrated.aegisSeconds,4);
+ assert.deepEqual(migrated.save?.guardHP,[0,10]);assert.deepEqual(migrated.grades,previous.grades);assert.deepEqual(migrated.items,previous.items);assert.deepEqual(migrated.journeyCleared,previous.journeyCleared);assert.equal(migrated.aegisSeconds,4);
 });
 
 test('首次答對、重試及跨關均不恢復常駐護盾，答對仍給分與累計道具',()=>{
