@@ -9,16 +9,13 @@ export const barrierZ = [3, -2, -8, -13, -18, -23];
 export const monsterCounts=[3,4,5,6];
 export const maxGuardCount=6;
 export function monsterCountForRealm(realm:number){return realm===4?1:monsterCounts[realm]??3}
-// Preserve the four realms' confirmed pace while tuning the boss independently.
-export const realmGuardSpeeds=[3.1,3.8,4.5,4.9];
-export const maxGuardSpeed=4.9;
+// Fixed pursuit pace for every guardian in a realm, independent of answers or difficulty.
+export const realmGuardSpeeds=[2.6,2.9,3.2,3.5];
+export const maxGuardSpeed=Math.max(...realmGuardSpeeds);
 export const gateSteps=[[3,6],[2,4,6],[2,3,5,6],[1,2,4,5,6]];
 export function gatesForRealm(realm:number){return (gateSteps[realm]??[]).map(unlockStep=>({unlockStep,z:barrierZ[unlockStep-1]}))}
 export function guardDetectionRange(realm:number,index=0){return index===0?13+realm*.6:9+realm*1.3}
-export function guardSpeed(realm:number,difficulty:'一般'|'刺激'|'極限',mistakes=0,rushing=false,index=0){
-  const base=realmGuardSpeeds[realm]??realmGuardSpeeds[0],difficultyBoost={一般:0,刺激:.2,極限:.4}[difficulty];
-  return Math.min(maxGuardSpeed,base+difficultyBoost+Math.min(mistakes*.1,.4)+(rushing?.35:0)+(index===0?0:-.12+index*.035));
-}
+export function guardSpeed(realm:number){return realmGuardSpeeds[realm]??realmGuardSpeeds[0]}
 
 /** The four realms share question order, while their physical locks differ. */
 export function movementLimit(realm: number, step: number): number | null {
