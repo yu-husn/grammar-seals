@@ -5,7 +5,7 @@ import {bossStones,bossStoneOrder,bossTargetStone,bossWalkRadius,bossThroneBound
 import {currentTarget,isNearTarget,targetName,interactionRadius} from '../src/campaign';
 import {keepClearOfMechanisms} from '../src/worldCollision';
 import {useGame,migrateSave} from '../src/store';
-import {buildBossVolley} from '../src/bossAttacks';
+import {buildBossVolley,bossProjectileLifetime} from '../src/bossAttacks';
 test('十六題啟動中央及七座周邊石碑，相鄰題的互動範圍不重疊，不能站中央連答',()=>{
  assert.equal(bossStoneOrder.length,16);assert.equal(new Set(bossStoneOrder).size,8);assert.equal(bossStoneOrder[0],0);assert.equal(bossStoneOrder[15],0);
  for(let step=0;step<16;step++){const s=bossTargetStone(step);assert.deepEqual(currentTarget(4,step),[s.x,s.z]);assert.ok(targetName(4,step).includes(s.name));assert.ok(isNearTarget(4,step,s.x,s.z));if(step){const previous=bossTargetStone(step-1);assert.ok(Math.hypot(s.x-previous.x,s.z-previous.z)>interactionRadius*2);for(let i=0;i<16;i++){const angle=i*Math.PI/8;assert.equal(isNearTarget(4,step,previous.x+Math.cos(angle)*2.49,previous.z+Math.sin(angle)*2.49),false)}}}
@@ -32,5 +32,5 @@ test('第13版進行中魔王存檔只補一次40秒，其他關卡不加時，�
  }finally{useGame.setState(previous)}
 });
 test('保留的邊碑也會被四種彈幕瞄準，並位於既有炮彈有效射程內',()=>{
- for(const target of bossStones)for(let pattern=0;pattern<4;pattern++){const volley=buildBossVolley(0,pattern,target);for(const origin of volley.origins){const shot=volley.shots.find(s=>s.x===origin.x&&s.z===origin.z)!;const dx=target.x-shot.x,dz=target.z-shot.z;assert.ok(Math.abs(dx*shot.vz-dz*shot.vx)<.0000001);assert.ok(dx*shot.vx+dz*shot.vz>0);assert.ok(Math.hypot(dx,dz)/Math.hypot(shot.vx,shot.vz)<8.5)}}
+ for(const target of bossStones)for(let pattern=0;pattern<4;pattern++){const volley=buildBossVolley(0,pattern,target);for(const origin of volley.origins){const shot=volley.shots.find(s=>s.x===origin.x&&s.z===origin.z)!;const dx=target.x-shot.x,dz=target.z-shot.z;assert.ok(Math.abs(dx*shot.vz-dz*shot.vx)<.0000001);assert.ok(dx*shot.vx+dz*shot.vz>0);assert.ok(Math.hypot(dx,dz)/Math.hypot(shot.vx,shot.vz)<bossProjectileLifetime)}}
 });

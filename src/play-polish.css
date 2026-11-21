@@ -38,3 +38,5 @@
 
 .item-belt button,.dodge-button,.touch-camera button,.interact{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 .item-belt button img{pointer-events:none}
+
+.world-bubbles>.hero-hit.recovery-hit{color:#bcf5d8;background:#21493df0;border-color:#8edcc5}

@@ -1,5 +1,3 @@
-import {bossProjectileSpeed} from './bossAttacks';
-
 export const realmDesigns = [
   { scene: '雨夜荒城', mechanism: '行跡輪與雙閘城道', result: '行動紀錄復原、足跡亮起；完成第3、6處機關，分別打開兩道閘門。', danger: '三名巡夜影衛從城門追入街巷。', floor: '#486573', fog: '#172b3b', accent: '#8ad5dd', ambient: .72, sky: '#8496b1', light: 2.6 },
   { scene: '碎鏡迴廊', mechanism: '照影鏡與三重閘門', result: '照影鏡復原；完成第2、4、6處機關，依序打開三道幻鏡閘門。', danger: '四名鏡面仕女從入口追入鏡廊。', floor: '#514f70', fog: '#25233e', accent: '#bdabff', ambient: .72, sky: '#9eacd0', light: 2.6 },
@@ -11,9 +9,9 @@ export const barrierZ = [3, -2, -8, -13, -18, -23];
 export const monsterCounts=[3,4,5,6];
 export const maxGuardCount=6;
 export function monsterCountForRealm(realm:number){return realm===4?1:monsterCounts[realm]??3}
-// Match the boss's opening, middle, final and fully accelerated projectile pace.
-export const realmGuardSpeeds=[bossProjectileSpeed(0),bossProjectileSpeed(4),bossProjectileSpeed(10),bossProjectileSpeed(10,16)];
-export const maxGuardSpeed=bossProjectileSpeed(10,16);
+// Preserve the four realms' confirmed pace while tuning the boss independently.
+export const realmGuardSpeeds=[3.1,3.8,4.5,4.9];
+export const maxGuardSpeed=4.9;
 export const gateSteps=[[3,6],[2,4,6],[2,3,5,6],[1,2,4,5,6]];
 export function gatesForRealm(realm:number){return (gateSteps[realm]??[]).map(unlockStep=>({unlockStep,z:barrierZ[unlockStep-1]}))}
 export function guardDetectionRange(realm:number,index=0){return index===0?13+realm*.6:9+realm*1.3}

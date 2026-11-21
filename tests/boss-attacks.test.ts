@@ -2,18 +2,17 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {buildBossVolley,bossProjectileSpeed,projectileCapacity} from '../src/bossAttacks';
 import {guardSpeed,guardDetectionRange,maxGuardSpeed} from '../src/realmDesign';
-test('四域關主基準對應魔王砲彈逐階速度，後段可快於主角普通步速',()=>{
- const reference=[[0,0],[4,0],[10,0],[10,16]];
+test('調低魔王難度時四域關主保留已確認的逐關追擊速度',()=>{
+ const reference=[3.1,3.8,4.5,4.9];
  for(let realm=0;realm<4;realm++){
-  const [step,volley]=reference[realm],shot=buildBossVolley(step,volley,{x:0,z:-1}).shots[0];
-  assert.ok(Math.abs(guardSpeed(realm,'一般')-Math.hypot(shot.vx,shot.vz))<1e-9);
+  assert.equal(guardSpeed(realm,'一般'),reference[realm]);
   if(realm){assert.ok(guardSpeed(realm,'一般')>guardSpeed(realm-1,'一般'));assert.ok(guardDetectionRange(realm,1)>guardDetectionRange(realm-1,1))}
  }
  assert.equal(guardSpeed(0,'一般'),3.1);assert.equal(guardSpeed(1,'一般'),3.8);assert.equal(guardSpeed(2,'一般'),4.5);assert.equal(guardSpeed(3,'一般'),4.9);
 });
 
-test('各難度與反擊仍可提速，六隻守衛不超過魔王砲彈最高速度',()=>{
- assert.equal(maxGuardSpeed,bossProjectileSpeed(15,100));
+test('四域各難度與反擊仍可提速，六隻守衛不超過既有4.9上限',()=>{
+ assert.equal(maxGuardSpeed,4.9);assert.ok(bossProjectileSpeed(15,100)<maxGuardSpeed);
  for(const difficulty of ['一般','刺激','極限'] as const){
   for(let realm=0;realm<4;realm++){
    assert.ok(guardSpeed(realm,difficulty)>=guardSpeed(realm,'一般'));
