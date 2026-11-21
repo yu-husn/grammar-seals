@@ -11,7 +11,7 @@ import './opening.css';
 const guardians=['巡夜影衛','鏡面仕女','喪屍判官','虛藏守將'];
 const timeLabel=(n:number)=>`0:${String(Math.floor(n)).padStart(2,'0')}`;
 export default function OpeningCinematic({hero,name,onComplete,audioAllowed,volume,low}:{hero:CharacterVariant;name:string;onComplete:()=>void;audioAllowed:boolean;volume:number;low:boolean}){
- const [shot,setShot]=useState(0),[elapsed,setElapsed]=useState(0),[playing,setPlaying]=useState(true),[audio,setAudio]=useState(false),[reduced,setReduced]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
+ const [shot,setShot]=useState(0),[elapsed,setElapsed]=useState(0),[playing,setPlaying]=useState(true),[audio,setAudio]=useState(true),[reduced,setReduced]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
  const clock=useRef(0),playingRef=useRef(playing),finished=useRef(false),musicStarted=useRef(false),complete=useRef(onComplete),root=useRef<HTMLElement>(null),skip=useRef<HTMLButtonElement>(null);playingRef.current=playing;complete.current=onComplete;
  const finish=useCallback(()=>{if(finished.current)return;finished.current=true;sound(false);complete.current()},[]);
  useEffect(()=>{const media=matchMedia('(prefers-reduced-motion: reduce)'),update=()=>setReduced(media.matches);media.addEventListener('change',update);return()=>media.removeEventListener('change',update)},[]);
