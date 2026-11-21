@@ -4,18 +4,19 @@ import OpeningScene from './OpeningScene';
 import type {CharacterVariant} from './Characters';
 import {openingShots,openingDuration,openingFrame,openingStart} from './openingStory';
 import {itemInfo,itemOrder} from './grading';
-import {sound,cue} from './audio';
+import {sound} from './audio';
+import {openingMusicTrack} from './musicCatalog';
 import './opening.css';
 
 const guardians=['巡夜影衛','鏡面仕女','喪屍判官','虛藏守將'];
 const timeLabel=(n:number)=>`0:${String(Math.floor(n)).padStart(2,'0')}`;
 export default function OpeningCinematic({hero,name,onComplete,audioAllowed,volume,low}:{hero:CharacterVariant;name:string;onComplete:()=>void;audioAllowed:boolean;volume:number;low:boolean}){
  const [shot,setShot]=useState(0),[elapsed,setElapsed]=useState(0),[playing,setPlaying]=useState(true),[audio,setAudio]=useState(false),[reduced,setReduced]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
- const clock=useRef(0),playingRef=useRef(playing),finished=useRef(false),complete=useRef(onComplete),root=useRef<HTMLElement>(null),skip=useRef<HTMLButtonElement>(null);playingRef.current=playing;complete.current=onComplete;
+ const clock=useRef(0),playingRef=useRef(playing),finished=useRef(false),musicStarted=useRef(false),complete=useRef(onComplete),root=useRef<HTMLElement>(null),skip=useRef<HTMLButtonElement>(null);playingRef.current=playing;complete.current=onComplete;
  const finish=useCallback(()=>{if(finished.current)return;finished.current=true;sound(false);complete.current()},[]);
  useEffect(()=>{const media=matchMedia('(prefers-reduced-motion: reduce)'),update=()=>setReduced(media.matches);media.addEventListener('change',update);return()=>media.removeEventListener('change',update)},[]);
  useEffect(()=>{skip.current?.focus();let last=performance.now();const timer=setInterval(()=>{const now=performance.now(),delta=Math.min(.25,(now-last)/1000);last=now;if(!playingRef.current||document.hidden||finished.current)return;clock.current=Math.min(openingDuration,clock.current+delta);setElapsed(clock.current);setShot(openingFrame(clock.current).index);if(clock.current>=openingDuration)finish()},80);const visibility=()=>{if(document.hidden)setPlaying(false)};document.addEventListener('visibilitychange',visibility);return()=>{clearInterval(timer);document.removeEventListener('visibilitychange',visibility);sound(false)}},[finish]);
- useEffect(()=>{sound(audio&&audioAllowed&&playing,[3,4,4,2,5,3][shot],false,volume);if(audio&&audioAllowed&&playing)cue(shot===1||shot===2?'danger':shot===5?'win':'unlock')},[audio,audioAllowed,playing,shot,volume]);
+ useEffect(()=>{const on=audio&&audioAllowed&&playing;sound(on,openingMusicTrack,false,volume,on&&!musicStarted.current);if(on)musicStarted.current=true},[audio,audioAllowed,playing,volume]);
  useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='Escape'){e.preventDefault();finish()}if(e.key!=='Tab')return;const buttons=Array.from(root.current?.querySelectorAll<HTMLButtonElement>('button:not(:disabled)')??[]),first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus()}};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[finish]);
  const seek=(index:number)=>{clock.current=openingStart(index)+.01;setElapsed(clock.current);setShot(index)};
  const current=openingShots[shot];

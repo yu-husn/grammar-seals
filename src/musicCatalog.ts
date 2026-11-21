@@ -1,3 +1,5 @@
+/** One continuous score for all six opening scenes: Eastern Thought. */
+export const openingMusicTrack=3;
 export const musicCatalog=[
 {title:'Ghost Story',file:'/music/town.mp3',isrc:'USUAN1300034',scene:'行跡迷城',reason:'顫音琴、水琴與稀疏打擊樂，營造荒城巡夜的懸疑。'},
 {title:'Night of Chaos',file:'/music/mirror.mp3',isrc:'USUAN1300042',scene:'幻象迷宮',reason:'吉他與不安的合成音，配合真假鏡像與迷失感。'},
