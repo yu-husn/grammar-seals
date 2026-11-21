@@ -14,7 +14,7 @@ source-search*
 # Keep only the current question-bank fixtures required by the tests.
 deliverables/*
 !deliverables/句型精選100題_含答案.json
-!deliverables/完整句型題庫_213題.json
+!deliverables/完整句型題庫_191題.json
 
 # Only portable build and preview tools are published.
 scripts/*

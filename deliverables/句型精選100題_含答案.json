@@ -4366,48 +4366,6 @@
     "bossReserved": false
   },
   {
-    "id": "original-3-0",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "桌上有一本書。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "桌上",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一本書",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一本書」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 193,
-    "examReferences": [],
-    "correctAnswer": "B　有無句",
-    "selectedNumber": 97,
-    "bossReserved": false
-  },
-  {
     "id": "original-3-1",
     "stem": "這道封印上的句子屬於哪一種句型？",
     "sentence": "他有三本小說。",
@@ -4443,10 +4401,10 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 194,
+    "exportIndex": 179,
     "examReferences": [],
     "correctAnswer": "B　有無句",
-    "selectedNumber": 98,
+    "selectedNumber": 97,
     "bossReserved": false
   },
   {
@@ -4485,10 +4443,10 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 195,
+    "exportIndex": 180,
     "examReferences": [],
     "correctAnswer": "B　有無句",
-    "selectedNumber": 99,
+    "selectedNumber": 98,
     "bossReserved": false
   },
   {
@@ -4527,7 +4485,49 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 196,
+    "exportIndex": 181,
+    "examReferences": [],
+    "correctAnswer": "B　有無句",
+    "selectedNumber": 99,
+    "bossReserved": false
+  },
+  {
+    "id": "original-3-6",
+    "stem": "這道封印上的句子屬於哪一種句型？",
+    "sentence": "牆上有一道裂縫。",
+    "options": [
+      "敘事句",
+      "有無句",
+      "判斷句",
+      "表態句"
+    ],
+    "answer": 1,
+    "category": "有無句",
+    "components": [
+      {
+        "text": "牆上",
+        "role": "主語"
+      },
+      {
+        "text": "有",
+        "role": "述語"
+      },
+      {
+        "text": "一道裂縫",
+        "role": "賓語"
+      }
+    ],
+    "explanation": "「有」表示「一道裂縫」的存在、領有或欠缺，是主要述語。",
+    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
+    "difficulty": 1,
+    "level": "行跡迷城",
+    "sourceType": "原創練習題",
+    "sourceUrl": "",
+    "examYear": null,
+    "examNumber": null,
+    "reviewStatus": "原創已檢核",
+    "kind": "辨識",
+    "exportIndex": 182,
     "examReferences": [],
     "correctAnswer": "B　有無句",
     "selectedNumber": 100,

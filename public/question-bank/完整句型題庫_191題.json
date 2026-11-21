@@ -7413,86 +7413,6 @@
     "correctAnswer": "C　判斷句"
   },
   {
-    "id": "original-2-3",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "鯨魚是哺乳類動物。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "鯨魚",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "哺乳類動物",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「鯨魚」的身分類別被判定為「哺乳類動物」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 177,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-4",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "竹子是植物。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "竹子",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "植物",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「竹子」的身分類別被判定為「植物」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 178,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
     "id": "original-2-5",
     "stem": "這道封印上的句子屬於哪一種句型？",
     "sentence": "故宮是博物館。",
@@ -7528,487 +7448,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 179,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-6",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "他是守門人。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "他",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "守門人",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「他」的身分類別被判定為「守門人」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 180,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-7",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這本書是字典。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這本書",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "字典",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這本書」的身分類別被判定為「字典」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 181,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-8",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "王老師是國文教師。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "王老師",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "國文教師",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「王老師」的身分類別被判定為「國文教師」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 182,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-12",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這把鑰匙是寶庫的鑰匙。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這把鑰匙",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "寶庫的鑰匙",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這把鑰匙」的身分類別被判定為「寶庫的鑰匙」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 183,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-13",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "那位老人是村長。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "那位老人",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "村長",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「那位老人」的身分類別被判定為「村長」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 184,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-14",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這件物品是古董。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這件物品",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "古董",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這件物品」的身分類別被判定為「古董」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 185,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-16",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這個地方是驛站。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這個地方",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "驛站",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這個地方」的身分類別被判定為「驛站」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 186,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-19",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這個房間是書房。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這個房間",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "書房",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這個房間」的身分類別被判定為「書房」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 187,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-20",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "那個人是船夫。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "那個人",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "船夫",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「那個人」的身分類別被判定為「船夫」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 188,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-24",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這座島嶼是火山島。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這座島嶼",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "火山島",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這座島嶼」的身分類別被判定為「火山島」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 189,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-25",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這條河是淡水河。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這條河",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "淡水河",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這條河」的身分類別被判定為「淡水河」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 190,
-    "examReferences": [],
-    "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-2-26",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "這位客人是醫師。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 2,
-    "category": "判斷句",
-    "components": [
-      {
-        "text": "這位客人",
-        "role": "主語"
-      },
-      {
-        "text": "是",
-        "role": "繫詞"
-      },
-      {
-        "text": "醫師",
-        "role": "斷語"
-      }
-    ],
-    "explanation": "「這位客人」的身分類別被判定為「醫師」；「是」連結主語與斷語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 191,
+    "exportIndex": 177,
     "examReferences": [],
     "correctAnswer": "C　判斷句"
   },
@@ -8048,49 +7488,9 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 192,
+    "exportIndex": 178,
     "examReferences": [],
     "correctAnswer": "C　判斷句"
-  },
-  {
-    "id": "original-3-0",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "桌上有一本書。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "桌上",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一本書",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一本書」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 193,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
   },
   {
     "id": "original-3-1",
@@ -8128,7 +7528,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 194,
+    "exportIndex": 179,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8168,7 +7568,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 195,
+    "exportIndex": 180,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8208,87 +7608,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 196,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-4",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "城外有一座橋。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "城外",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一座橋",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一座橋」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 197,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-5",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "袋子裡沒有金幣。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "袋子裡",
-        "role": "主語"
-      },
-      {
-        "text": "沒有",
-        "role": "述語"
-      },
-      {
-        "text": "金幣",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「沒有」表示「金幣」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 2,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 198,
+    "exportIndex": 181,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8328,47 +7648,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 199,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-7",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "井裡沒有水。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "井裡",
-        "role": "主語"
-      },
-      {
-        "text": "沒有",
-        "role": "述語"
-      },
-      {
-        "text": "水",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「沒有」表示「水」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 2,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 200,
+    "exportIndex": 182,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8408,7 +7688,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 201,
+    "exportIndex": 183,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8448,47 +7728,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 202,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-10",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "書架上有五本書。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "書架上",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "五本書",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「五本書」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 203,
+    "exportIndex": 184,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8528,7 +7768,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 204,
+    "exportIndex": 185,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8568,7 +7808,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 205,
+    "exportIndex": 186,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8608,7 +7848,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 206,
+    "exportIndex": 187,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8648,47 +7888,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 207,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-16",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "我沒有零用錢。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "我",
-        "role": "主語"
-      },
-      {
-        "text": "沒有",
-        "role": "述語"
-      },
-      {
-        "text": "零用錢",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「沒有」表示「零用錢」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 2,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 208,
+    "exportIndex": 188,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8728,87 +7928,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 209,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-19",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "河裡有魚。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "河裡",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "魚",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「魚」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 210,
-    "examReferences": [],
-    "correctAnswer": "B　有無句"
-  },
-  {
-    "id": "original-3-20",
-    "stem": "這道封印上的句子屬於哪一種句型？",
-    "sentence": "庭院裡有一棵梅樹。",
-    "options": [
-      "敘事句",
-      "有無句",
-      "判斷句",
-      "表態句"
-    ],
-    "answer": 1,
-    "category": "有無句",
-    "components": [
-      {
-        "text": "庭院裡",
-        "role": "主語"
-      },
-      {
-        "text": "有",
-        "role": "述語"
-      },
-      {
-        "text": "一棵梅樹",
-        "role": "賓語"
-      }
-    ],
-    "explanation": "「有」表示「一棵梅樹」的存在、領有或欠缺，是主要述語。",
-    "commonError": "應檢查主要述謂關係，不能只看單一關鍵字。",
-    "difficulty": 1,
-    "level": "行跡迷城",
-    "sourceType": "原創練習題",
-    "sourceUrl": "",
-    "examYear": null,
-    "examNumber": null,
-    "reviewStatus": "原創已檢核",
-    "kind": "辨識",
-    "exportIndex": 211,
+    "exportIndex": 189,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8848,7 +7968,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 212,
+    "exportIndex": 190,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   },
@@ -8888,7 +8008,7 @@
     "examNumber": null,
     "reviewStatus": "原創已檢核",
     "kind": "辨識",
-    "exportIndex": 213,
+    "exportIndex": 191,
     "examReferences": [],
     "correctAnswer": "B　有無句"
   }
