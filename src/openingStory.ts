@@ -19,3 +19,8 @@ export function openingChasePositions(progress:number){
   cameraTravel:p*6,
  };
 }
+
+export function openingGrammarPosition(progress:number){
+ const u=Math.max(0,Math.min(1,progress/.55)),ease=u*u*(3-2*u);
+ return {x:-2.2+3.6*ease,y:0,z:2.4-1.4*ease,walking:u<1};
+}

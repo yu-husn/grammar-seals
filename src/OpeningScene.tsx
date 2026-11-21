@@ -3,7 +3,7 @@ import {useFrame} from '@react-three/fiber';
 import * as THREE from 'three';
 import {Humanoid,type CharacterVariant} from './Characters';
 import {Rune} from './Atmosphere';
-import {openingFrame,openingChasePositions} from './openingStory';
+import {openingFrame,openingChasePositions,openingGrammarPosition} from './openingStory';
 
 type Props={shot:number;clock:MutableRefObject<number>;hero:CharacterVariant;reduced:boolean;playing:boolean};
 const guardianVariants:CharacterVariant[]=['shadow','mirror','judge','vault'];
@@ -19,12 +19,14 @@ function OpeningScene({shot,clock,hero,reduced,playing}:Props){
   if(shot===1){boss.current.position.set(0,0,-2+Math.sin(p*Math.PI)*.35);army.current.forEach((g,i)=>{if(g){g.position.set([-5.3,-1.9,1.9,5.3][i],0,[.5,1.6,1.6,.5][i]+p*.65);g.rotation.y=0}})}
   const pursuit=openingChasePositions(p);
   if(shot===2){heroRef.current.position.set(pursuit.hero.x,0,pursuit.hero.z);heroRef.current.lookAt(pursuit.hero.x,0,pursuit.hero.z+8);army.current.forEach((g,i)=>{if(g){const at=pursuit.guards[i];g.position.set(at.x,at.y,at.z);g.lookAt(heroRef.current.position)}})}
-  else if(shot>=3){heroRef.current.position.set(shot===3?-1.4:0,0,shot===5?3:1.5);heroRef.current.lookAt(shot===3?new THREE.Vector3(1.4,0,-.4):shot===5?new THREE.Vector3(0,0,-12):new THREE.Vector3(0,0,12));army.current.forEach((g,i)=>{if(g){g.position.set([-3.9,-1.3,1.3,3.9][i],0,i===1||i===2?-3:-1.4);g.lookAt(heroRef.current.position)}})}
-  if(playing&&!reduced){heroMotion.current+=dt*(shot===2?8:shot===5?1.1:.5);guardMotion.current+=dt*(shot===2?7:shot===4?1:shot===1?2:.3)}
+  else if(shot>=3){const entry=openingGrammarPosition(p);heroRef.current.position.set(shot===3?entry.x:0,0,shot===3?entry.z:shot===5?3:1.5);heroRef.current.lookAt(shot===3?new THREE.Vector3(1.4,0,entry.walking?1:-.4):shot===5?new THREE.Vector3(0,0,-12):new THREE.Vector3(0,0,12));army.current.forEach((g,i)=>{if(g){g.position.set([-3.9,-1.3,1.3,3.9][i],0,i===1||i===2?-3:-1.4);g.lookAt(heroRef.current.position)}})}
+  if(shot===3)heroMotion.current=playing&&!reduced&&openingGrammarPosition(p).walking?1:0;
+  else if(playing&&!reduced)heroMotion.current+=dt*(shot===2?8:shot===5?1.1:.5);
+  if(playing&&!reduced)guardMotion.current+=dt*(shot===2?7:shot===4?1:shot===1?2:.3);
   aegis.current.visible=shot===4;aegis.current.position.copy(heroRef.current.position);aegis.current.rotation.y=reduced?0:t*.6;
   purge.current.visible=shot===4&&p>.35;purge.current.position.set(0,.12,1.5);purge.current.scale.setScalar(1+(reduced?.7:(p*.9)%1)*5);(purge.current.material as THREE.MeshBasicMaterial).opacity=.75*(1-(p*.9)%1);
   bindings.current.forEach((ring,i)=>{if(ring){ring.visible=shot===4;ring.position.copy(army.current[i]!.position).y=1.1;ring.rotation.z=reduced?0:t*.5}});
-  seals.current.forEach((s,i)=>{if(s){s.visible=shot===3||shot===5;const angle=i*Math.PI/2;s.position.set(1.4+Math.cos(angle)*2,2.1+(reduced?0:Math.sin(t*1.3+i)*.13),-.4+Math.sin(angle)*2);s.rotation.y=reduced?0:Math.sin(t*.9+i)*.12}});
+  seals.current.forEach((s,i)=>{if(s){s.visible=shot===3||shot===5;const angle=i*Math.PI/2+(shot===3?Math.PI/4:0);s.position.set(1.4+Math.cos(angle)*2,2.1+(reduced?0:Math.sin(t*1.3+i)*.13),-.4+Math.sin(angle)*2);s.rotation.y=reduced?0:Math.sin(t*.9+i)*.12}});
   const aspect=(camera as THREE.PerspectiveCamera).aspect,portrait=aspect<1.05,scale=portrait?Math.max(1.05,1/aspect):1;
   const positions=shot===0||shot===5?[12,10,19]:shot===1?[4.5,5.8,16]:shot===2?[5,4.6,12]:[5,4.6,11];
   const travel=shot===2?pursuit.cameraTravel:0;
