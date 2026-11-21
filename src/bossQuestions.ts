@@ -4,7 +4,7 @@ import {teacherQuestions} from './teacherQuestions';
 import {subjectChallenges} from './subjectChallenges';
 import {getPracticeQuestions} from './questionPool';
 export function sentenceKey(sentence:string){return (sentence.match(/「([^」]+)」/)?.[1]??sentence).replace(/[\p{P}\p{Z}\s]/gu,'')}
-function component(q:Question,role:string):Question{const answer=q.components.findIndex(c=>c.role===role);if(answer<0)throw Error('魔王題成分缺漏 '+q.id+role);return {...q,kind:'解剖',stem:`找出句中的${role}，擊破無言君護盾。`,options:q.components.map(c=>c.text),answer}}
+function component(q:Question,role:string):Question{const answer=q.components.findIndex(c=>c.role===role);if(answer<0)throw Error('魔王題成分缺漏 '+q.id+role);return {...q,kind:'解剖',stem:`找出句中的${role}，削減無言君生命值。`,options:q.components.map(c=>c.text),answer}}
 const hardNarrative=getPracticeQuestions().find(q=>q.sentence==='人世間的是是非非極難分辨。')!;
 /** These sentences belong exclusively to the boss encounter, including their anatomy variants. */
 function teacher(id:string):Question{const q=teacherQuestions.find(q=>q.id===id);if(!q)throw Error('魔王指定題不存在：'+id);return q}

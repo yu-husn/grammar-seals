@@ -12,7 +12,7 @@ export const characterProfiles=[
 {name:'鏡面仕女',title:'幻象迷宮關主',description:guardianDesigns[1].description},
 {name:'喪屍判官',title:'真假審判關主',description:guardianDesigns[2].description},
 {name:'虛藏守將',title:'虛實禁域關主',description:guardianDesigns[3].description},
-{name:'無言君',title:'四句審判殿之主',description:'玄紅龍紋袍、金冠與裂面，背負無字光輪。三重護盾分別混淆句型、字面與文脈。'},
+{name:'無言君',title:'四句審判殿之主',description:'玄紅龍紋袍、金冠與裂面，背負無字光輪。三階段攻勢分別混淆句型、字面與文脈。'},
 {name:'蘇映',title:'女辨句使者',description:'修長青年女辨句使者，霜青層疊長裙、自然眉眼、柔順垂髮與玉簪，攜燈持卷。'}
 ];
 function Shape({position=[0,0,0],scale=[1,1,1],rotation=[0,0,0],color,kind='box',args=[1,1,1],metal=0}:{position?:[number,number,number];scale?:[number,number,number];rotation?:[number,number,number];color:string;kind?:'box'|'sphere'|'cylinder'|'cone'|'torus';args?:number[];metal?:number}){return <mesh position={position} scale={scale} rotation={rotation} castShadow><>{kind==='box'?<boxGeometry args={args as [number,number,number]}/>:kind==='sphere'?<sphereGeometry args={[args[0]??1,12,10]}/>:kind==='cylinder'?<cylinderGeometry args={[args[0],args[1],args[2],10]}/>:kind==='cone'?<coneGeometry args={[args[0],args[1],8]}/>:<torusGeometry args={[args[0],args[1],6,20]}/>}</><meshStandardMaterial color={color} metalness={metal} roughness={metal?.4:.8}/></mesh>}

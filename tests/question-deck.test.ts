@@ -2,7 +2,7 @@ import './setup';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {createQuestionDeck,isQuestionDeck,questionSlots} from '../src/questionDeck';
-import {isBossQuestion,sentenceKey} from '../src/bossQuestions';
+import {bossQuestions,isBossQuestion,sentenceKey} from '../src/bossQuestions';
 import {answerChoices,validateQuestion} from '../src/questions';
 import {isUserAddedQuestion,uniqueQuestionSentences} from '../src/questionPriority';
 import {getPracticeQuestions} from '../src/questionPool';
@@ -20,6 +20,20 @@ test('五十種隨機種子：54題以句子去重，四域各六題含四類，
 });
 test('不同種子會抽出不同句子與順序，不只是重排固定主線題組',()=>{
  const a=createQuestionDeck({},seeded(1)),b=createQuestionDeck({},seeded(2));assert.notDeepEqual(a,b);const main=(d:typeof a)=>new Set(Object.entries(d.questions).filter(([k])=>/^realm[0-3]:/.test(k)).map(([,q])=>sentenceKey(q.sentence)));assert.notDeepEqual(main(a),main(b));
+});
+
+test('舊卷魔王護盾提示改成生命值，保留所有題目答案、成績與續玩進度',async()=>{
+ const previous=useGame.getState();try{
+  const deck=createQuestionDeck({},seeded(25)),key=Object.keys(deck.questions).find(key=>key.startsWith('realm4:')&&deck.questions[key].stem.includes('削減無言君生命值'))!;
+  assert.ok(key);deck.questions[key].stem=deck.questions[key].stem.replace('削減無言君生命值','擊破無言君護盾');
+  const before=JSON.parse(JSON.stringify(deck)),grades={[key]:{questionId:deck.questions[key].id,wrong:true,credit:null}},save={version:4 as const,realm:4,step:10,seals:[0,1,2,3],hp:70,seconds:123,mistakes:1,combo:2,cleared:false};
+  useGame.setState({phase:'menu',questionDeck:deck,grades,save});const updated=useGame.getState().ensureQuestions();
+  assert.notEqual(updated,deck);assert.ok(deck.questions[key].stem.includes('護盾'),'不改動原題卷物件');assert.ok(updated.questions[key].stem.includes('削減無言君生命值'));
+  for(const slot of questionSlots){const {stem:oldStem,...oldQuestion}=before.questions[slot],{stem:newStem,...newQuestion}=updated.questions[slot];assert.deepEqual(newQuestion,oldQuestion);if(slot!==key)assert.equal(newStem,oldStem)}
+  assert.deepEqual(useGame.getState().grades,grades);assert.deepEqual(useGame.getState().save,save);assert.equal(useGame.getState().ensureQuestions(),updated);
+  await useGame.persist.rehydrate();assert.equal(useGame.getState().questionDeck!.questions[key].stem,updated.questions[key].stem);assert.deepEqual(useGame.getState().save,save);
+  assert.ok(bossQuestions.every(q=>!/護盾|破盾/u.test(q.stem)));
+ }finally{useGame.setState(previous)}
 });
 test('已有成績、補救題和舊未答題會固定，未來新題避開歷史句子',()=>{
  const grades={'realm0:0':{questionId:'teacher-narrative-exam-reading',wrong:false,credit:1 as const},'gems:0':{questionId:'teacher-attribute-first-love',wrong:true,credit:null}},d=createQuestionDeck({grades,current:{realm:0,step:1}},seeded(3));assert.equal(d.questions['realm0:0'].id,grades['realm0:0'].questionId);assert.equal(d.questions['realm0:1'].id,'teacher-narrative-mother-care');assert.ok(!Object.entries(d.questions).filter(([k])=>k!=='realm0:0').some(([,q])=>q.id===grades['realm0:0'].questionId));assert.equal(d.questions['gems:0'].id===grades['gems:0'].questionId,false,'舊魔王保留句不再出補給站');

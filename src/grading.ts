@@ -38,7 +38,7 @@ export const itemInfo:Record<ItemId,{name:string;symbol:string;unit:string;image
   step:{name:'疾風靴',symbol:'步',unit:'雙',image:'/items/step.svg',effect:'重置閃避',description:'立即重置靈步閃避的冷卻；閃避已就緒時不消耗。'},
   shadow:{name:'縛魔索',symbol:'影',unit:'條',image:'/items/shadow.svg',effect:'半速3秒',description:'使守衛移速或魔王飛行咒彈速度降至50%（原本的一半），持續3秒。研讀與暫停時停止計時。'},
   time:{name:'逆時珠',symbol:'時',unit:'個',image:'/items/time.svg',effect:'+10秒',description:'探索倒數增加10秒；同一禁域每份成績卷限用一次。關閉倒數時不消耗。'},
-  strike:{name:'誅邪彈',symbol:'彈',unit:'顆',image:'/items/strike.svg',effect:'傷害20＋擊退',description:'引爆六步範圍的靈光，對附近守衛造成20點傷害、擊退並定身3秒；生命歸零則擊倒；無法穿過未開閘門。魔王戰改為消除六步內的飛行咒彈，不削減答題護盾。未命中不消耗。開卷獲得1顆，兩站皆可用40點兌換，持有數量不限，每次命中消耗1顆。'},
+  strike:{name:'誅邪彈',symbol:'彈',unit:'顆',image:'/items/strike.svg',effect:'傷害20＋擊退',description:'引爆六步範圍的靈光，對附近守衛造成20點傷害、擊退並定身3秒；生命歸零則擊倒；無法穿過未開閘門。魔王戰改為消除六步內的飛行咒彈，不直接削減魔王生命值。未命中不消耗。開卷獲得1顆，兩站皆可用40點兌換，持有數量不限，每次命中消耗1顆。'},
   aegis:{name:'金鐘罩',symbol:'護',unit:'個',image:'/items/aegis.svg',effect:'無傷8秒',description:'全身籠罩金光，8秒內怪物碰觸、咒彈及陷阱均不扣生命。研讀、解析與暫停時停止效果計時，生效期間不能疊用。開卷獲得1個，兩站皆可用50點兌換，持有數量不限。'},
   heal:{name:'延命丹',symbol:'丹',unit:'顆',image:'/items/heal.svg',effect:'生命＋20',description:'立即恢復20點生命，最高100點；生命已滿時不消耗。只能在探索與魔王戰存活時使用，不能在失敗後復活。開卷獲得1顆，兩站皆可用30點兌換，持有數量不限。'},
 };

@@ -50,7 +50,7 @@ test('補給以40點與50點兌換道具，數量超過2仍可購買，沒有學
  assert.equal(g.buySupplyItem('gems','strike'),true);assert.equal(g.buySupplyItem('gems','aegis'),true);assert.equal(useGame.getState().items.strike,10);assert.equal(useGame.getState().items.aegis,8);assert.equal(useGame.getState().supplyBanks.gems.spent,90);assert.equal(gradeSummary(useGame.getState().grades).score,0);
 });
 
-test('魔王戰誅邪彈清咒事件不削減答題護盾，金鐘罩擋咒彈不改題數',()=>{
+test('魔王戰誅邪彈清咒事件不削減魔王生命，金鐘罩擋咒彈不改題數',()=>{
  const g=useGame.getState();useGame.setState({realm:4,bossHP:160});g.useItem('strike');g.resolveAttack(useGame.getState().attackRequest,4);g.useItem('aegis');g.hit('spell');assert.equal(useGame.getState().bossHP,160);assert.equal(gradeSummary(useGame.getState().grades).completed,0);assert.equal(useGame.getState().hp,100);
 });
 test('延命丹滿血不消耗，恢復20點並上限100，保存至續玩且不影響學科分數',()=>{

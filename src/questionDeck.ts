@@ -8,7 +8,12 @@ import {journeySections,slotKey,type GradeBook,type SectionId} from './grading';
 
 export type QuestionDeck={version:1;questions:Record<string,Question>};
 export const questionSlots=journeySections.flatMap(s=>Array.from({length:s.count},(_,i)=>slotKey(s.id,i)));
-const clone=(q:Question):Question=>({...q,options:[...q.options],components:q.components.map(c=>({...c}))});
+const clone=(q:Question):Question=>({...q,stem:q.stem.replaceAll('擊破無言君護盾','削減無言君生命值'),options:[...q.options],components:q.components.map(c=>({...c}))});
+/** Refresh obsolete battle instructions without replacing saved questions or answers. */
+export function refreshQuestionPrompts(deck:QuestionDeck):QuestionDeck{
+ const outdated=Object.entries(deck.questions).filter(([key,q])=>key.startsWith('realm4:')&&q.stem.includes('擊破無言君護盾'));
+ return outdated.length?{...deck,questions:{...deck.questions,...Object.fromEntries(outdated.map(([key,q])=>[key,clone(q)]))}}:deck;
+}
 const allowed=(q:Question)=>!deletedQuestionIds.includes(q.id)&&!isDeletedSentence(q.sentence)&&q.reviewStatus!=='待教師審核'&&validateQuestion(q).length===0;
 export function isQuestionDeck(raw:unknown):raw is QuestionDeck{
  if(!raw||typeof raw!=='object')return false;const d=raw as QuestionDeck;
