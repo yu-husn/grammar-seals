@@ -1,7 +1,7 @@
 import {clampRemainingSeconds} from './timing';
 import type {ItemId} from './grading';
 export type SupplyId='gems'|'blast';
-export type SupplySnapshot={seconds:number;answered:number;score:number;combo:number;board?:number[][];moves?:number;freeMoves?:number;questionId?:string|null;result?:boolean|null;picked?:number|null;wrong?:boolean;paused?:boolean;mode?:'click'|'type';stage?:'paused'|'fire'|'explain'|'done';correct?:boolean;target?:number|null;powers?:number;frozen?:number};
+export type SupplySnapshot={seconds:number;answered:number;score:number;combo:number;board?:number[][];moves?:number;freeMoves?:number;questionId?:string|null;result?:boolean|null;picked?:number|null;wrong?:boolean;paused?:boolean;mode?:'click'|'type';stage?:'paused'|'fire'|'explain'|'done';correct?:boolean;target?:number|null};
 export type SupplyBank={earned:number;spent:number;claims:string[];attempt?:{finished:boolean;snapshot?:SupplySnapshot}};
 export type SupplyBanks=Record<SupplyId,SupplyBank>;
 export const supplyCosts:Record<ItemId,number>={step:30,shadow:40,time:30,strike:40,aegis:50,heal:30};
@@ -16,7 +16,7 @@ export function normalizeSupplySnapshot(raw:unknown):SupplySnapshot|undefined{
  if(![s.seconds,s.answered,s.score,s.combo].every(Number.isFinite))return;
  const number=(v:unknown,fallback=0,max=100000)=>typeof v==='number'&&Number.isFinite(v)?Math.min(max,Math.max(0,Math.floor(v))):fallback;
  const choice=(v:unknown)=>Number.isInteger(v)&&Number(v)>=0&&Number(v)<4?Number(v):null;
- const snapshot:SupplySnapshot={seconds:clampRemainingSeconds(s.seconds),answered:number(s.answered,0,7),score:Math.max(-100000,Math.min(100000,s.score)),combo:number(s.combo),moves:number(s.moves,30,100),freeMoves:number(s.freeMoves,0,3),questionId:typeof s.questionId==='string'?s.questionId.slice(0,150):null,result:typeof s.result==='boolean'?s.result:null,picked:choice(s.picked),wrong:s.wrong===true,paused:s.paused===true,mode:s.mode==='type'?'type':'click',stage:s.stage==='paused'||s.stage==='explain'||s.stage==='done'?s.stage:'fire',correct:s.correct===true,target:choice(s.target),powers:number(s.powers),frozen:number(s.frozen,0,5)};
+ const snapshot:SupplySnapshot={seconds:clampRemainingSeconds(s.seconds),answered:number(s.answered,0,7),score:Math.max(-100000,Math.min(100000,s.score)),combo:number(s.combo),moves:number(s.moves,30,100),freeMoves:number(s.freeMoves,0,3),questionId:typeof s.questionId==='string'?s.questionId.slice(0,150):null,result:typeof s.result==='boolean'?s.result:null,picked:choice(s.picked),wrong:s.wrong===true,paused:s.paused===true,mode:s.mode==='type'?'type':'click',stage:s.stage==='paused'||s.stage==='explain'||s.stage==='done'?s.stage:'fire',correct:s.correct===true,target:choice(s.target)};
  if(Array.isArray(s.board)&&s.board.length===6&&s.board.every(row=>Array.isArray(row)&&row.length===6&&row.every(n=>Number.isInteger(n)&&n>=0&&n<=5)))snapshot.board=s.board.map(row=>[...row]);
  return snapshot;
 }

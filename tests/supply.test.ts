@@ -2,9 +2,15 @@ import './setup';
 import {test,beforeEach} from 'node:test';
 import assert from 'node:assert/strict';
 import {useGame} from '../src/store';
-import {creditSupply,freshSupplyBanks,normalizeSupplyBanks} from '../src/supply';
+import {creditSupply,freshSupplyBanks,normalizeSupplyBanks,normalizeSupplySnapshot} from '../src/supply';
 import {formatScore,gradeSummary,markAnswer} from '../src/grading';
 beforeEach(()=>useGame.setState({phase:'gems',realm:0,journeyCleared:['realm0'],supplyBanks:freshSupplyBanks(),items:{step:0,shadow:0,time:0,strike:1,aegis:1,heal:1},grades:{},timeUsed:[],slowSeconds:0}));
+
+test('舊定身符欄位移除，仍保留射擊進度、連擊、時間與暫停狀態',()=>{
+ const snapshot=normalizeSupplySnapshot({seconds:123,answered:3,score:22,combo:3,questionId:'retained',stage:'paused',powers:8,frozen:5})!;
+ assert.equal('powers' in snapshot,false);assert.equal('frozen' in snapshot,false);
+ assert.equal(snapshot.seconds,123);assert.equal(snapshot.answered,3);assert.equal(snapshot.combo,3);assert.equal(snapshot.stage,'paused');assert.equal(snapshot.questionId,'retained');
+});
 test('每站最多100積分，同一消除／辨句來源只領一次，花掉不重置上限',()=>{const g=useGame.getState();assert.equal(g.awardSupplyPoints('gems','move:0:0',30),30);assert.equal(g.awardSupplyPoints('gems','move:0:0',30),0);g.awardSupplyPoints('gems','move:0:1',90);assert.equal(useGame.getState().supplyBanks.gems.earned,100);assert.ok(g.buySupplyItem('gems','step'));assert.equal(useGame.getState().supplyBanks.gems.spent,30);assert.equal(g.awardSupplyPoints('gems','move:1:0',10),0);assert.equal(useGame.getState().supplyBanks.gems.earned-useGame.getState().supplyBanks.gems.spent,70)});
 test('30／40／30點兌換共用符咒，積分不足與重複點擊皆不超扣',()=>{const g=useGame.getState();assert.equal(g.buySupplyItem('gems','step'),false);g.awardSupplyPoints('gems','earned',100);assert.ok(g.buySupplyItem('gems','step'));assert.ok(g.buySupplyItem('gems','shadow'));assert.ok(g.buySupplyItem('gems','time'));assert.equal(g.buySupplyItem('gems','time'),false);assert.deepEqual(useGame.getState().items,{step:1,shadow:1,time:1,strike:1,aegis:1,heal:1});assert.equal(useGame.getState().supplyBanks.gems.spent,100);assert.equal(gradeSummary(useGame.getState().grades).score,0);const saved=JSON.parse(localStorage.getItem('grammar-seals-v1')!).state;assert.equal(saved.supplyBanks.gems.spent,100)});
 test('兩站帳本獨立，離開補給站不能遠端換道具，新卷會重設積分與背包',()=>{const g=useGame.getState();g.awardSupplyPoints('gems','one',100);useGame.setState({phase:'play'});assert.equal(g.buySupplyItem('gems','step'),false);assert.equal(g.awardSupplyPoints('gems','two',50),0);useGame.setState({phase:'blast',journeyCleared:['realm0','gems','realm1','realm2']});g.awardSupplyPoints('blast','one',40);assert.equal(useGame.getState().supplyBanks.blast.earned,40);assert.equal(useGame.getState().supplyBanks.gems.earned,100);g.setPhase('teacher');g.resetAssessment();assert.deepEqual(useGame.getState().supplyBanks,freshSupplyBanks());assert.deepEqual(useGame.getState().items,{step:0,shadow:0,time:0,strike:1,aegis:1,heal:1})});
