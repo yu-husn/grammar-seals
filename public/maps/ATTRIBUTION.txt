@@ -1,0 +1,9 @@
+語法禁域：四句封印 — 羊皮紙地圖材質
+Asset: parchment-v1.jpg (1536 × 1024, JPEG quality90)
+Created: 2026-11-22
+Method: built-in image_gen tool (not CLI/API fallback).
+Use: decorative parchment background in the seven-stop journey map. All Chinese labels, progress and controls remain accessible HTML; route and landmarks remain SVG.
+The generated PNG is preserved at the tool's original output location. The selected texture was copied into this project as an optimized JPEG without changing its visual content.
+
+Final generation prompt:
+Use case: photorealistic-natural. Asset type: seamless full-bleed material background for an ancient Chinese fantasy browser game's readable journey map. Generate a landscape high-resolution scan of real antique parchment / vellum, as if a centuries-old folded map has been unfolded. True tactile cream and honey-tan hide, very fine organic fibers and tiny mottled pores, subtle uneven thickness, faint worn fold creases running vertically in thirds and one horizontal crease, restrained old water stains and rubbed brown wear at the margins. Center 75 percent is clean pale ivory ochre with very low-contrast texture so large dark Chinese labels will remain perfectly readable when overlaid. Sparse extremely faint sepia ink cartography ONLY near the far outer margins: hand-drawn Chinese mountain ridge contours, a few river contours and small woodland hatch marks. Overhead flat scan with natural material microshadow; no perspective. Texture extends fully to every edge; no photographed desk, no surrounding objects, no frames, no bright lighting glare, no intense burnt black borders. Text: none. No letters, symbols, route dots, labels, UI cards, buttons, buildings, characters, logos, watermarks or modern graphics. This is a real material asset, not a screenshot or interface mockup. Warm natural parchment, restrained and authentic, never glossy or saturated orange.
