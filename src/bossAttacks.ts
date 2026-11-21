@@ -1,6 +1,7 @@
 import {bossPhase} from './bossRules';
 export const projectileCapacity=96;
 export const bossProjectileLifetime=12;
+export const bossWindupSeconds=[3.2,3.0,2.8] as const;
 export const bossPatterns=['追蹤扇射','側翼交叉','環陣包圍','旋掃彈幕'];
 type Point={x:number;z:number};
 export type BossShot={x:number;z:number;vx:number;vz:number;curve:number};
@@ -20,5 +21,5 @@ export function buildBossVolley(step:number,volley:number,target:Point):BossVoll
     const angle=base+spread;
     return {x:origin.x,z:origin.z,vx:Math.sin(angle)*speed,vz:Math.cos(angle)*speed,curve:pattern===3?(waveIndex%2?-.17:.17):0};
   });
-  return {pattern,label:bossPatterns[pattern],shots,origins,interval:9-phase*.5,windup:3.6-phase*.2};
+  return {pattern,label:bossPatterns[pattern],shots,origins,interval:9-phase*.5,windup:bossWindupSeconds[phase]};
 }

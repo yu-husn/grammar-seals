@@ -16,12 +16,12 @@ test('四域追擊上限2.7，魔王彈速仍採獨立設定',()=>{
  for(let realm=0;realm<4;realm++)assert.ok(guardSpeed(realm)<=maxGuardSpeed);
 });
 
-test('魔王增量彈幕保留原彈速與間隔，三階段預警各延長1秒',()=>{
+test('魔王增量彈幕保留原彈速與間隔，三階段預警為3.2、3.0、2.8秒',()=>{
  for(let step=0;step<16;step++)for(const volley of [0,6,20,999]){
   const phase=step<4?0:step<10?1:2,plan=buildBossVolley(step,volley,{x:1,z:2});
   assert.equal(plan.shots.length,Math.min(32,12+step+Math.floor(volley/6)));
   assert.ok(plan.shots.length>Math.min(24,8+step+Math.floor(volley/6)));
-  assert.equal(plan.windup,3.6-phase*.2);assert.equal(plan.interval,9-phase*.5);
+  assert.equal(plan.windup,[3.2,3.0,2.8][phase]);assert.equal(plan.interval,9-phase*.5);
   for(const shot of plan.shots)assert.ok(Math.abs(Math.hypot(shot.vx,shot.vz)-(2.2+phase*.3+Math.min(volley*.01,.2)))<1e-9);
  }
 });
