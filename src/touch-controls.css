@@ -1,0 +1,12 @@
+/* Keep the movement gesture independent from selection and neighbouring controls. */
+.joystick{z-index:14;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:contain}
+.joystick>*{pointer-events:none;user-select:none;-webkit-user-select:none}
+.exploration-hud{z-index:13}
+.exploration-hud .hud-status,.exploration-hud .hud-right{pointer-events:none}
+.exploration-hud .hud-actions button{pointer-events:auto;flex:none}
+.hud-right{min-width:0;max-width:calc(100% - 92px)}
+.hud-grade{max-width:100%}
+.hud-grade .grade-value{flex-wrap:wrap;white-space:normal}
+.hud-grade .grade-number{max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal}
+.hud-actions{max-width:100%;flex-wrap:wrap;justify-content:flex-end}
+@media(pointer:coarse){.joystick{left:max(20px,env(safe-area-inset-left,0px));bottom:max(45px,calc(env(safe-area-inset-bottom,0px) + 24px))}}
