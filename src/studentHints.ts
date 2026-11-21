@@ -17,8 +17,14 @@ export function reasoningOnly(text:string){
 
 const generalMethod='先找出全句主要談論的對象和主要述語，再確認兩者的關係：是在敘述動作、描寫性質或狀態、界定身分類別，還是表示存在或領有？把時間、程度與頻率等修飾語分開，不只看「有、無、是、非」等單一字詞。';
 
+function isComponentTask(q:Question){
+ // Old saved questions may label an anatomy task as identification.
+ const classificationOptions=q.options.every(option=>/^(敘事|有無|判斷|表態)句$/u.test(option));
+ return q.kind==='解剖'||!classificationOptions&&/主語|述語|表語|繫詞|繫語|斷語|賓語|中心語|句子成分/u.test(q.stem);
+}
+
 export function studentHint(q:Question){
- if(q.kind==='解剖'){
+ if(isComponentTask(q)){
   if(/主語/u.test(q.stem))return /中心語/u.test(q.stem)?'先找主要述語，再問「誰／什麼」是被陳述的對象。將修飾這個對象的詞語暫時拿開，找出主語中最核心的詞。':'先找主要述語，再問「誰／什麼」是被陳述的對象。完整主語應保留修飾這個對象的詞語；遇到倒裝或省略時，先還原一般語序。';
   if(/賓語/u.test(q.stem))return '先找主要動詞，再問動作涉及「誰／什麼」。遇到文言倒裝，先還原一般語序，再比對動詞和受事對象的位置。';
   if(/繫詞/u.test(q.stem))return '找出連結主語與後面身分、類別說明的成分；確認它在全句中的連結作用，而非只看字面。';
@@ -31,4 +37,7 @@ export function studentHint(q:Question){
  return reasoning?`${reasoning} 請依這些成分的關係，比對各選項的定義後作答。`:generalMethod;
 }
 
-export function studentCommonError(q:Question){return reasoningOnly(q.commonError)||'先釐清主要述謂關係，不只依單一字詞作答。'}
+export function studentCommonError(q:Question){
+ if(isComponentTask(q))return '比較各選項在句中的作用，注意完整成分與中心語的差別；若有省略或倒裝，先還原語序，再自行選擇。';
+ return reasoningOnly(q.commonError)||'先釐清主要述謂關係，不只依單一字詞作答。';
+}
