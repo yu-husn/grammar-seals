@@ -1,0 +1,9 @@
+.student-reset-entry{width:100%;margin:2px 0 4px}
+.student-reset-entry>.student-reset-button{width:100%;min-height:48px;border:1px solid #dfbd80;background:#343e42;color:#ffe1a6;font-size:18px;font-weight:700}
+.student-reset-entry>p{margin:7px 0 0;color:#d3e6ec;font-size:14px;line-height:1.6}
+.student-reset-dialog{position:fixed;inset:0;margin:auto;width:min(600px,calc(100vw - 32px));height:fit-content;max-height:calc(100dvh - 32px);padding:24px;color:#f3f8fc}
+.student-reset-dialog::backdrop{background:#061218d4;backdrop-filter:blur(6px)}
+.student-reset-dialog h2{font-weight:700}
+.student-reset-dialog>p{font-size:18px;line-height:1.8}
+.student-reset-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.student-reset-actions>button{flex:1;min-width:130px;min-height:48px;font-size:18px}
