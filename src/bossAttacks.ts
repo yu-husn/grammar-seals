@@ -9,7 +9,7 @@ export function bossProjectileSpeed(step:number,volley=0){return 2.2+bossPhase(s
 /** Seeded by volley number: repeatable for testing, varied across the battle. */
 export function buildBossVolley(step:number,volley:number,target:Point):BossVolley{
   const phase=bossPhase(step),pattern=(volley+phase)%4;
-  const count=Math.min(24,8+Math.max(0,Math.min(15,step))+Math.floor(volley/6));
+  const count=Math.min(32,12+Math.max(0,Math.min(15,step))+Math.floor(volley/6));
   const speed=bossProjectileSpeed(step,volley),turn=volley*2.39996323;
   const origins:Point[]=pattern===0?[{x:Math.sin(turn)*2.5,z:-10.5}]:pattern===1?[{x:-8.4,z:-7+Math.sin(turn)*3},{x:8.4,z:3+Math.cos(turn)*3}]:pattern===2?Array.from({length:8},(_,i)=>({x:Math.sin(turn+i*Math.PI/4)*9.1,z:-3+Math.cos(turn+i*Math.PI/4)*9.1})):[{x:-8.5,z:3},{x:8.5,z:-8},{x:Math.sin(turn)*4,z:10}];
   const shots=Array.from({length:count},(_,i)=>{
@@ -20,5 +20,5 @@ export function buildBossVolley(step:number,volley:number,target:Point):BossVoll
     const angle=base+spread;
     return {x:origin.x,z:origin.z,vx:Math.sin(angle)*speed,vz:Math.cos(angle)*speed,curve:pattern===3?(waveIndex%2?-.17:.17):0};
   });
-  return {pattern,label:bossPatterns[pattern],shots,origins,interval:9-phase*.5,windup:2.6-phase*.2};
+  return {pattern,label:bossPatterns[pattern],shots,origins,interval:9-phase*.5,windup:3.6-phase*.2};
 }

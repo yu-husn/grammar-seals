@@ -5,20 +5,20 @@ import {useGame} from '../src/store';
 import {gradeSummary} from '../src/grading';
 import {journeyOrder} from '../src/journey';
 import {buildBossVolley,bossProjectileLifetime} from '../src/bossAttacks';
-import {bossPlayerDamage,bossHitCooldown,bossAnswerHeal,bossAnswerRespite,bossRescueHP} from '../src/bossRules';
+import {bossPlayerDamage,bossAnswerHeal,bossAnswerRespite,bossRescueHP,bossLearningHelp} from '../src/bossRules';
 
 function beginBoss(){useGame.setState({phase:'menu'});useGame.getState().resetForNextStudent();const deck=useGame.getState().ensureQuestions();useGame.setState({unlocked:4,journeyCleared:journeyOrder.filter(s=>s!=='realm4'),grades:Object.fromEntries(Object.entries(deck.questions).filter(([key])=>/^realm[0-3]:/.test(key)).map(([key,q])=>[key,{questionId:q.id,wrong:false,credit:1 as const}]))});useGame.getState().start(false,4)}
 
 test('教學彈幕速度、數量、頻率與預警留出移動時間，後段仍逐題增加',()=>{
- assert.equal(bossPlayerDamage,5);assert.equal(bossHitCooldown,4);assert.equal(bossAnswerRespite,4);
- let previous=0;for(let step=0;step<16;step++){const plan=buildBossVolley(step,0,{x:0,z:6});assert.ok(plan.shots.length>previous);assert.ok(plan.shots.length<=24);previous=plan.shots.length;assert.ok(plan.windup>=2.2);assert.ok(plan.interval>=8);for(const shot of plan.shots)assert.ok(Math.hypot(shot.vx,shot.vz)<=3.000001)}
- assert.equal(buildBossVolley(15,999,{x:0,z:0}).shots.length,24);assert.equal(bossProjectileLifetime,12);
+ assert.equal(bossPlayerDamage,10);assert.equal(bossAnswerRespite,4);assert.ok(!bossLearningHelp.includes('受傷後有4秒'));
+ let previous=0;for(let step=0;step<16;step++){const plan=buildBossVolley(step,0,{x:0,z:6});assert.equal(plan.shots.length,12+step);assert.ok(plan.shots.length>previous);previous=plan.shots.length;assert.ok(plan.windup>=3.2);assert.ok(plan.interval>=8);for(const shot of plan.shots)assert.ok(Math.hypot(shot.vx,shot.vz)<=3.000001)}
+ assert.equal(buildBossVolley(15,999,{x:0,z:0}).shots.length,32);assert.equal(bossProjectileLifetime,12);
 });
 
-test('魔王受擊扣5點，生命耗盡回復30並保留題目、成績、剩餘時間與續玩資料',async()=>{
+test('魔王受擊扣10點，連續命中不設緩衝，耗盡回復30並保留題目、成績、時間與續玩資料',async()=>{
  const previous=useGame.getState();try{
-  beginBoss();useGame.setState({hp:5});const before=useGame.getState();before.hit('spell');const after=useGame.getState();assert.equal(after.hp,bossRescueHP);assert.equal(after.phase,'play');assert.equal(after.hitEvent.kind,'recovery');assert.equal(after.step,before.step);assert.deepEqual(after.grades,before.grades);assert.equal(after.seconds,before.seconds);assert.equal(after.save!.hp,30);after.hit('spell');assert.equal(useGame.getState().hp,25);assert.equal(useGame.getState().hitEvent.text,'生命值-5');
-  useGame.getState().setPhase('menu');await useGame.persist.rehydrate();useGame.getState().start(true);assert.equal(useGame.getState().hp,25);assert.equal(useGame.getState().step,0);assert.equal(useGame.getState().bossHP,160);
+  beginBoss();useGame.setState({hp:10});const before=useGame.getState();before.hit('spell');const after=useGame.getState();assert.equal(after.hp,bossRescueHP);assert.equal(after.phase,'play');assert.equal(after.hitEvent.kind,'recovery');assert.equal(after.step,before.step);assert.deepEqual(after.grades,before.grades);assert.equal(after.seconds,before.seconds);assert.equal(after.save!.hp,30);after.hit('spell');assert.equal(useGame.getState().hp,20);assert.equal(useGame.getState().hitEvent.text,'生命值-10');
+  useGame.getState().setPhase('menu');await useGame.persist.rehydrate();useGame.getState().start(true);assert.equal(useGame.getState().hp,20);assert.equal(useGame.getState().step,0);assert.equal(useGame.getState().bossHP,160);
  }finally{useGame.setState(previous)}
 });
 
