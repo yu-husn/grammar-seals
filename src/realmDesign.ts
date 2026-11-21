@@ -10,7 +10,7 @@ export const monsterCounts=[1,2,3,4];
 export const maxGuardCount=4;
 export function monsterCountForRealm(realm:number){return realm===4?1:monsterCounts[realm]??1}
 // Fixed pursuit pace for every guardian in a realm, independent of answers or difficulty.
-export const realmGuardSpeeds=[2.1,2.3,2.6,2.9];
+export const realmGuardSpeeds=[2.1,2.3,2.5,2.7];
 export const maxGuardSpeed=Math.max(...realmGuardSpeeds);
 export const gateSteps=[[3,6],[2,4,6],[2,3,5,6],[1,2,4,5,6]];
 export function gatesForRealm(realm:number){return (gateSteps[realm]??[]).map(unlockStep=>({unlockStep,z:barrierZ[unlockStep-1]}))}
