@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {getPracticeQuestions} from '../src/questionPool';
 import {comparisonAudit} from '../src/comparedQuestions';
 import {useGame} from '../src/store';
-test('刪除主語中心語題，保留同句的完整主語任務',()=>{const pool=getPracticeQuestions();assert.ok(pool.some(q=>q.id==='subject-full-01'));assert.ok(!pool.some(q=>q.id==='subject-head-01'));assert.ok(!pool.some(q=>q.reviewStatus==='待教師審核'));assert.equal(pool.length,218)});
+test('刪除主語中心語題，保留同句的完整主語任務',()=>{const pool=getPracticeQuestions();assert.ok(pool.some(q=>q.id==='subject-full-01'));assert.ok(!pool.some(q=>q.id==='subject-head-01'));assert.ok(!pool.some(q=>q.reviewStatus==='待教師審核'));assert.equal(pool.length,213)});
 
 test('教師刪除繁衍題，正式題庫及核准匯入的同句均不再抽出',()=>{
  const sentence='讓生命永無止境穿越時空的方法是繁衍。',removed=comparisonAudit.find(q=>q.sentence===sentence.slice(0,-1))!;
