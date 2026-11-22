@@ -1,0 +1,8 @@
+.traffic-counter{padding:8px 10px;background:#173746f2;border:1px solid #90a9ad;color:#f0f5f6;font:500 15px/1.5 var(--font-ui);pointer-events:auto;min-width:0}
+.traffic-counter>div{display:flex;justify-content:space-between;align-items:baseline;gap:6px;flex-wrap:wrap}
+.traffic-counter strong{font-size:22px;font-weight:700;color:#f2d295;overflow-wrap:anywhere;min-width:0}
+.traffic-counter small{display:block;font-size:12px;color:#cadbe1}
+.traffic-counter .traffic-unit{display:inline;margin-left:4px;font-size:14px}
+.traffic-counter .traffic-note{font-size:14px;color:#e1eaee;margin-top:2px}
+
+@media(max-width:700px){.traffic-counter{padding:6px 9px;font-size:14px}.traffic-counter strong{font-size:20px}}
