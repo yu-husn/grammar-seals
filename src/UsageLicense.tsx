@@ -7,6 +7,9 @@ export default function UsageLicense({onClose}:{onClose:()=>void}){
   <header className="section-head"><h2 id="usage-license-heading">使用及授權</h2><button ref={close} onClick={onClose} aria-label="關閉使用及授權">關閉</button></header>
   <p className="usage-owner">長億高中｜簡鈺珣作品</p>
   <p className="usage-welcome">歡迎直接遊玩、用於課堂學習，並分享本遊戲網址。</p>
+  <h3>網站流量統計</h3>
+  <p>本站使用<a href="https://www.busuanzi.cc/doc.php" target="_blank" rel="noreferrer">不蒜子</a>累計本遊戲網址的使用人次與瀏覽次數。人次為去重估算，並非精確學生人數；共用網路、不同裝置及阻擋統計的設定都可能影響數字。新版啟用後開始累計，無法回溯先前流量。</p>
+  <p>統計服務會收到連線IP及固定的公開遊戲網址；本遊戲不向它傳送姓名、成績、答題紀錄、網址查詢參數或來源頁面。統計不受重新計分影響，也不影響遊戲進度。</p>
   <h3>原創內容，權利保留</h3>
   <p>本作品中由創作者依法享有權利的原創劇情、文字、美術、程式表達及具創作性的選擇編排，均保留相關權利。公開提供遊玩，不代表授予整套搬移、另行發布或任意改作的權利。</p>
   <h3>複製、改作與商用，請先取得授權</h3>

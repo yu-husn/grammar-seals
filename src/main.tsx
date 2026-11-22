@@ -16,6 +16,8 @@ import StoryIntroduction from './StoryIntroduction';
 import CreatorCredit from './CreatorCredit';
 import GameGuide from './GameGuide';
 import UsageLicense from './UsageLicense';
+import {MenuCornerControls} from './TrafficCounter';
+import {loadTraffic} from './traffic';
 import GemGame from './GemGame';
 import BlastGame from './BlastGame';
 import {useGame} from './store';
@@ -43,6 +45,7 @@ import './grammar-review.css';
 import './journey-map.css';
 import './touch-controls.css';
 import './usage-license.css';
+import './traffic.css';
 import {canEnterSection,journeyOrder,nextJourneySection} from './journey';
 import type {SectionId} from './grading';
 import {bossMaxHP,bossQuestionCount,bossPlayerDamage,bossAnswerHeal,bossRescueHP,bossLearningHelp} from './bossRules';
@@ -56,6 +59,7 @@ class RenderBoundary extends React.Component<{children:React.ReactNode},{failed:
 function setMovement(x:number,z:number){input.x=x;input.z=z}
 function App(){const g=useGame(),hero=heroes[g.hero],phase=g.phase,info=realmInfo[g.realm],length=realmLength(g.realm),q=g.question;
 const [opening,setOpening]=useState(true);
+useEffect(()=>{void loadTraffic(window.location)},[]);
 const [near,setNear]=useState(false),[distance,setDistance]=useState(0),[notes,setNotes]=useState(false),[help,setHelp]=useState(false),[dossier,setDossier]=useState(false),[credits,setCredits]=useState(false),[scoreOpen,setScoreOpen]=useState(false),[itemIntroOpen,setItemIntroOpen]=useState(false),[heroPickerOpen,setHeroPickerOpen]=useState(false),[profile,setProfile]=useState(0),[threat,setThreat]=useState(''),[flash,setFlash]=useState(''),[mechanismNote,setMechanismNote]=useState('');
 const [usageOpen,setUsageOpen]=useState(false);
 const closeUsage=useCallback(()=>setUsageOpen(false),[]);
@@ -104,7 +108,7 @@ return <main data-score={gradeSummary(g.grades).score} data-scored-count={gradeS
 {phase==='teacher'&&<Teacher/>}{phase==='gems'&&<GemGame onClose={()=>g.setPhase('menu')} onAdvance={()=>{const current=useGame.getState(),target=nextJourneySection(current.journeyCleared)??'realm4';start(Boolean(current.save&&!current.save.cleared&&target===`realm${current.save.realm}`),target)}}/>} {phase==='blast'&&<BlastGame onClose={()=>g.setPhase('menu')} onAdvance={()=>{const current=useGame.getState(),target=nextJourneySection(current.journeyCleared)??'realm4';start(Boolean(current.save&&!current.save.cleared&&target===`realm${current.save.realm}`),target)}}/>}
 {phase==='notPassed'&&(g.bossHP>0||bossDefeatDone)&&<AssessmentNotPassed/>}
 {(phase==='win'&&bossDefeatDone||phase==='lose')&&<div className="overlay ending"><div className="panel" ref={panel}><span className="eyebrow">{phase==='win'?'真正結局 · 四句歸序':`${info.title} · 封印未竟`}</span>{phase==='win'?<CompletionStamp id="boss"/>:<div className="seal-mark">寂</div>}<ScoreCard/><h2>{phase==='win'?(g.mistakes===0?'一字不惑，萬語重生':'知錯明辨，四句歸序'):g.hp===0?'被守衛擒住':'迷失於無聲之境'}</h2><p>{phase==='win'?`四枚靈印匯聚成光，擊敗無言君，無字王座化為微光。動作、狀態、身分與存在，各自找回了名字。${hero.name}收起${hero.tool}，聽見世界再次開口。`:g.hp===0?'生命耗盡，這次追捕暫時得逞。帶著已理解的句型，再次進入本關；先前取得的靈印不會遺失。':'探索時間已盡。可以重試本關，或到教師後台調整倒數。'}</p>{phase==='win'&&<p className="achievement">{g.mistakes===0?'隱藏成就：無言終章 · 一字不惑':'成就：知錯能改 · 四印齊歸'}<br/>四座禁域與無言君決戰全部完成</p>}<p>本次誤判 {g.mistakes} 次 · 已取得 {g.seals.length}/4 枚靈印</p><button className="primary" onClick={()=>phase==='win'?start():queueReview(`realm${g.realm}` as SectionId,()=>g.retry())}>{phase==='win'?'展開新的冒險':'重試本關'}</button><button onClick={()=>g.setPhase('teacher')}>查看學習紀錄</button><button onClick={()=>g.setPhase('menu')}>返回主選單</button>{phase==='win'&&<CreatorCredit/>}</div></div>}
-{reviewStage&&<GrammarReview key={reviewStage} section={reviewStage} onClose={()=>{reviewAction.current=null;setReviewStage(null);g.setPhase('menu')}} onContinue={()=>{const action=reviewAction.current;reviewAction.current=null;setReviewStage(null);action?.()}}/>}{phase==='menu'?<div className="menu-corner-controls"><button className="menu-opening-button" aria-haspopup="dialog" onClick={()=>{setUsageOpen(false);setDossier(false);setCredits(false);setHelp(false);setProfile(0);setMapStage(null);setOpening(true)}}>開場動畫</button><CampaignSealProgress/></div>:!['teacher','gems','blast'].includes(phase)&&<CampaignSealProgress/>}{mapStage&&<JourneyMap current={mapStage} onClose={()=>{mapAction.current=null;setMapStage(null)}} onContinue={()=>{const action=mapAction.current,target=mapStage;mapAction.current=null;setMapStage(null);if(action)action();else {const saved=useGame.getState().save;enterStage(Boolean(saved&&!saved.cleared&&target===`realm${saved.realm}`),target)}}}/>}</main>}
+{reviewStage&&<GrammarReview key={reviewStage} section={reviewStage} onClose={()=>{reviewAction.current=null;setReviewStage(null);g.setPhase('menu')}} onContinue={()=>{const action=reviewAction.current;reviewAction.current=null;setReviewStage(null);action?.()}}/>}{phase==='menu'?<MenuCornerControls><button className="menu-opening-button" aria-haspopup="dialog" onClick={()=>{setUsageOpen(false);setDossier(false);setCredits(false);setHelp(false);setProfile(0);setMapStage(null);setOpening(true)}}>開場動畫</button><CampaignSealProgress/></MenuCornerControls>:!['teacher','gems','blast'].includes(phase)&&<CampaignSealProgress/>}{mapStage&&<JourneyMap current={mapStage} onClose={()=>{mapAction.current=null;setMapStage(null)}} onContinue={()=>{const action=mapAction.current,target=mapStage;mapAction.current=null;setMapStage(null);if(action)action();else {const saved=useGame.getState().save;enterStage(Boolean(saved&&!saved.cleared&&target===`realm${saved.realm}`),target)}}}/>}</main>}
 applyFontScale(useGame.getState().settings.fontScale);
 const host=document.getElementById('root')!;host.innerHTML='<div class="loading font-load-note" role="status">正在載入字體與禁域……</div>';
 document.fonts.load('500 28px "Noto Sans TC"').then(()=>{document.documentElement.dataset.fontReady='true'}).catch(()=>{document.documentElement.dataset.fontReady='fallback'}).finally(()=>createRoot(host).render(<App/>));
