@@ -1,13 +1,13 @@
 export const trafficPage='https://yu-husn.github.io/grammar-seals/';
 export const trafficEndpoint='https://cdn.busuanzi.cc/api.php';
-export type TrafficResult={status:'ready';visitors:number;views:number}|{status:'unavailable'|'preview'};
+export type TrafficResult={status:'ready';visitors:number}|{status:'unavailable'|'preview'};
 type Site=Pick<Location,'hostname'|'pathname'|'protocol'>;
 export function isTrafficLocation(site:Site){return site.protocol==='https:'&&site.hostname==='yu-husn.github.io'&&/^\/grammar-seals\/(?:index\.html)?$/.test(site.pathname)}
 export function readTrafficStats(data:unknown):TrafficResult{
  if(!data||typeof data!=='object')throw Error('Invalid traffic response');
  const values=data as Record<string,unknown>;
  const number=(v:unknown)=>{if(typeof v!=='number'&&!(typeof v==='string'&&/^\d+$/.test(v)))throw Error('Invalid traffic count');const n=Number(v);if(!Number.isSafeInteger(n)||n<0)throw Error('Invalid traffic count');return n};
- return {status:'ready',visitors:number(values.busuanzi_page_uv),views:number(values.busuanzi_page_pv)};
+ return {status:'ready',visitors:number(values.busuanzi_page_uv)};
 }
 // One network request per page load, shared across menus, replays and React mounts.
 // Only a fixed public URL is sent: no query string, student records or referrer.

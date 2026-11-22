@@ -6,16 +6,17 @@ test('traffic is limited to the production game, including its index alias',()=>
  assert.ok(isTrafficLocation(production));assert.ok(isTrafficLocation({...production,pathname:'/grammar-seals/index.html'}));
  for(const site of [{...production,hostname:'localhost'},{...production,hostname:'example.com'},{...production,pathname:'/another-game/'},{...production,protocol:'http:'}])assert.equal(isTrafficLocation(site),false);
 });
-test('traffic uses page counts, never domain totals, and rejects missing or corrupt counts',()=>{
- assert.deepEqual(readTrafficStats({busuanzi_page_uv:'12',busuanzi_page_pv:34,busuanzi_site_uv:999999}),{status:'ready',visitors:12,views:34});
- assert.deepEqual(readTrafficStats({busuanzi_page_uv:0,busuanzi_page_pv:0}),{status:'ready',visitors:0,views:0});
+test('traffic only consumes page visitors, ignoring views and other GitHub projects',()=>{
+ assert.deepEqual(readTrafficStats({busuanzi_page_uv:'12',busuanzi_page_pv:34,busuanzi_site_uv:999999}),{status:'ready',visitors:12});
+ assert.deepEqual(readTrafficStats({busuanzi_page_uv:0}),{status:'ready',visitors:0});
+ assert.deepEqual(readTrafficStats({busuanzi_page_uv:12,busuanzi_page_pv:'invalid'}),{status:'ready',visitors:12});
  for(const n of [undefined,null,-1,NaN,Infinity,1.5,'',true,'<img>',Number.MAX_SAFE_INTEGER+1])assert.throws(()=>readTrafficStats({busuanzi_page_uv:n,busuanzi_page_pv:34}));
  assert.throws(()=>readTrafficStats({busuanzi_site_pv:10,busuanzi_site_uv:2}));
 });
 test('mounts/replays share one request; no credentials, student records or URL params are sent',async()=>{
  let calls=0;
  const loader=createTrafficLoader((async(url,options)=>{calls++;assert.equal(url,trafficEndpoint);assert.equal(options?.credentials,'omit');assert.equal(options?.referrerPolicy,'no-referrer');assert.deepEqual(JSON.parse(options?.body as string),{url:trafficPage,referrer:''});return new Response(JSON.stringify({busuanzi_page_uv:12,busuanzi_page_pv:34}))}) as typeof fetch);
- const a=loader(production),b=loader(production);assert.equal(a,b);assert.deepEqual(await a,{status:'ready',visitors:12,views:34});assert.deepEqual(await loader(production),await a);assert.equal(calls,1);
+ const a=loader(production),b=loader(production);assert.equal(a,b);assert.deepEqual(await a,{status:'ready',visitors:12});assert.deepEqual(await loader(production),await a);assert.equal(calls,1);
 });
 test('preview never contacts or increments the production counter',async()=>{
  let calls=0;const loader=createTrafficLoader((async()=>{calls++;throw Error('unexpected request')}) as typeof fetch);
