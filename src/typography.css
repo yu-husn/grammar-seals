@@ -20,6 +20,9 @@ h1,h2,h3,h4{font-family:var(--font-ui);font-weight:700;letter-spacing:.025em}h1{
 .visual-ready .blast-rock b{font-size:var(--option-size);font-weight:500;letter-spacing:.01em;line-height:1.5}
 .campaign-route h2,.bonus-practice h2,.blast-mode #blast-result{font-weight:700}
 .menu-shell{align-items:safe center}
+.brand>.creator-credit,.ending .creator-credit{font:700 28px/1.55 var(--font-ui);color:#e8c889;letter-spacing:.035em;margin:10px 0 18px;overflow-wrap:anywhere}
+.ending .creator-credit{margin:24px 0 0;padding-top:18px;border-top:1px solid #d8b77966;text-align:center}
+@media(max-width:700px){.brand>.creator-credit,.ending .creator-credit{font-size:24px;letter-spacing:.02em}}
 .menu-score-button{display:block;width:100%;min-width:0;margin:24px 0 12px;padding:20px 12px;border:1px solid #91b5bd;background:#173644ed;color:#f4f8fc;text-align:center;font-family:var(--font-ui);font-weight:900}
 .menu-score-button .menu-score-title{display:block;margin-bottom:8px;font:900 24px/1.4 var(--font-ui)}
 .menu-score-button .grade-value{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:0 10px;white-space:normal}
