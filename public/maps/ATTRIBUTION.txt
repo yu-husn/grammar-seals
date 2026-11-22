@@ -3,6 +3,7 @@ Asset: parchment-v1.jpg (1536 × 1024, JPEG quality90)
 Created: 2026-11-22
 Method: built-in image_gen tool (not CLI/API fallback).
 Use: decorative parchment background in the seven-stop journey map. All Chinese labels, progress and controls remain accessible HTML; route and landmarks remain SVG.
+scroll-roller.svg: original code-drawn wood/antique-gold side roller artwork, created for this project. Reused at both ends of each horizontal destination scroll; no reference-image pixels or watermarks are included.
 The generated PNG is preserved at the tool's original output location. The selected texture was copied into this project as an optimized JPEG without changing its visual content.
 
 Final generation prompt:

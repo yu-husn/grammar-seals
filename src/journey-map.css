@@ -32,7 +32,7 @@
 .journey-map-sheet button{position:relative;min-height:48px;padding:12px 24px;border:1px solid #795035;font:700 20px/1.45 var(--font-ui);border-radius:2px;box-shadow:0 2px 3px #67412224}
 .journey-map-sheet .map-depart{color:#fff2d7;background:linear-gradient(#864e35,#713e2b);border-color:#633823}.journey-map-sheet .map-back{color:#49301d;background:#ecd5a899;border-color:#85603c}
 .journey-map-sheet button:hover{filter:brightness(1.08)}.journey-map-sheet button:focus-visible,.map-route-area:focus-visible{outline:3px solid #883b2b;outline-offset:3px}
-@keyframes unfold-map{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes unfold-map{from{opacity:0}to{opacity:1}}
 @media(min-width:701px) and (max-width:1050px){.journey-map-overlay{padding:14px}.journey-map-sheet{max-height:calc(100dvh - 28px);padding:20px 24px 18px}.parchment-route{gap:22px 22px;padding-inline:18px}.map-stop{gap:9px;padding-inline:4px}.map-stop-icon{width:48px;height:48px}.map-stop b{font-size:26px}.map-guardian{font-size:21px}.map-stop small{font-size:19px}.map-stop em{font-size:17px}}
 @media(max-width:700px){
  .journey-map-overlay{padding:max(10px,env(safe-area-inset-top)) 8px max(10px,env(safe-area-inset-bottom))}
@@ -52,3 +52,27 @@
 }
 @media(max-height:550px){.journey-map-overlay{padding:8px}.journey-map-sheet{max-height:calc(100dvh - 16px);padding:14px 20px 12px}.journey-map-sheet header{padding-bottom:8px}.map-kicker{display:none}.journey-map-sheet h2{font-size:27px;margin-top:0;padding-bottom:3px}.journey-map-sheet header>p{font-size:14px;margin-top:7px;line-height:1.4}.journey-map-sheet footer{padding-top:8px}.journey-map-sheet footer p{font-size:15px;margin-bottom:7px}.map-safety-note{font-size:13px}.journey-map-sheet footer button{font-size:16px;min-height:44px;padding:8px 16px}.parchment-route{grid-template-rows:repeat(3,minmax(140px,auto))}}
 @media(prefers-reduced-motion:reduce){.map-paper-wrap{animation:none}}
+
+/* Each destination is a horizontal handscroll: vertical rollers travel left/right. */
+.map-stop{--scroll-delay:0ms;padding-inline:34px;gap:10px}
+.map-position-1{--scroll-delay:50ms}.map-position-2{--scroll-delay:100ms}.map-position-3{--scroll-delay:150ms}.map-position-4{--scroll-delay:200ms}.map-position-5{--scroll-delay:250ms}.map-position-6{--scroll-delay:300ms}
+.map-stop:before{display:none}
+.map-scroll{position:absolute;inset:-5px -7px;z-index:-1;pointer-events:none;filter:drop-shadow(0 4px 3px #68432338)}
+.map-scroll-paper{position:absolute;inset:7px 17px;border:1px solid #96704388;background:linear-gradient(90deg,#93602c66,#f8e5b72b 9%,#fff3d66b 48%,#ead29b30 90%,#93602c66),url('/maps/parchment-v1.jpg') center/650px auto;box-shadow:inset 0 3px 8px #71452040,inset 0 -3px 8px #71452040;clip-path:polygon(0 3%,9% 1%,18% 2.5%,29% 0,40% 1.5%,50% 0,61% 2%,73% .5%,83% 2%,93% 1%,100% 3%,100% 97%,92% 99%,81% 97.5%,70% 100%,60% 98%,49% 100%,39% 98.5%,28% 100%,18% 98%,8% 99%,0 97%);animation:open-scroll-paper .65s cubic-bezier(.2,.65,.25,1) var(--scroll-delay) both}
+.map-scroll-paper:after{content:'';position:absolute;inset:4px 7px;border-block:1px solid #97734355;box-shadow:0 1px #fff4d84d,inset 0 1px #fff4d84d;pointer-events:none}
+.map-scroll-roller{position:absolute;top:0;bottom:0;width:34px;height:100%;object-fit:fill;filter:drop-shadow(2px 1px 2px #4b291940)}
+.map-scroll-left{left:0;animation:open-scroll-left .65s cubic-bezier(.2,.65,.25,1) var(--scroll-delay) both}
+.map-scroll-right{right:0;animation:open-scroll-right .65s cubic-bezier(.2,.65,.25,1) var(--scroll-delay) both}
+.map-stop>div,.map-stop-icon,.map-stop-number,.map-cleared:after{animation:scroll-ink .4s ease-out calc(var(--scroll-delay) + .25s) both}
+.map-stop-icon{width:50px;height:50px}
+.map-stop-number{left:20px;top:-5px;z-index:1}
+.map-current .map-scroll-paper{border-color:#943b27;background-color:#f8e1a8;box-shadow:inset 0 0 0 2px #9c3f2b80,inset 0 0 18px #8f552d40}
+.map-current .map-scroll-paper:after{border-color:#943b2780}
+.map-cleared:after{right:21px;top:-2px;z-index:1;background:#f0d7a6b0}
+@keyframes open-scroll-paper{from{clip-path:inset(0 49%)}to{clip-path:polygon(0 3%,9% 1%,18% 2.5%,29% 0,40% 1.5%,50% 0,61% 2%,73% .5%,83% 2%,93% 1%,100% 3%,100% 97%,92% 99%,81% 97.5%,70% 100%,60% 98%,49% 100%,39% 98.5%,28% 100%,18% 98%,8% 99%,0 97%)}}
+@keyframes open-scroll-left{from{left:calc(50% - 24px)}to{left:0}}
+@keyframes open-scroll-right{from{right:calc(50% - 24px)}to{right:0}}
+@keyframes scroll-ink{from{opacity:0}to{opacity:1}}
+@media(min-width:701px) and (max-width:1050px){.map-stop{padding-inline:24px;gap:7px}.map-stop-icon{width:38px;height:38px}.map-scroll{inset:-5px -8px}.map-scroll-roller{width:28px}.map-scroll-paper{inset-inline:14px}.map-stop-number{left:12px}.map-cleared:after{right:12px}}
+@media(max-width:700px){.map-stop{padding:18px 23px;gap:9px;min-height:160px}.map-scroll{inset:-3px -10px}.map-scroll-roller{width:30px}.map-scroll-paper{inset-inline:15px}.map-stop-icon{width:40px;height:40px}.map-stop-number{left:4px;top:-1px}.map-cleared:after{right:6px;top:0}.parchment-route{gap:24px;padding-inline:15px}.parchment-route:before{left:50%}}
+@media(prefers-reduced-motion:reduce){.map-scroll-paper,.map-scroll-roller,.map-stop>div,.map-stop-icon,.map-stop-number,.map-cleared:after{animation:none}}
