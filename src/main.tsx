@@ -16,8 +16,7 @@ import StoryIntroduction from './StoryIntroduction';
 import CreatorCredit from './CreatorCredit';
 import GameGuide from './GameGuide';
 import UsageLicense from './UsageLicense';
-import {MenuCornerControls} from './TrafficCounter';
-import {loadTraffic} from './traffic';
+import {MenuCornerControls} from './MenuCornerControls';
 import GemGame from './GemGame';
 import BlastGame from './BlastGame';
 import {useGame} from './store';
@@ -45,7 +44,6 @@ import './grammar-review.css';
 import './journey-map.css';
 import './touch-controls.css';
 import './usage-license.css';
-import './traffic.css';
 import {canEnterSection,journeyOrder,nextJourneySection} from './journey';
 import type {SectionId} from './grading';
 import {bossMaxHP,bossQuestionCount,bossPlayerDamage,bossAnswerHeal,bossRescueHP,bossLearningHelp} from './bossRules';
@@ -59,7 +57,6 @@ class RenderBoundary extends React.Component<{children:React.ReactNode},{failed:
 function setMovement(x:number,z:number){input.x=x;input.z=z}
 function App(){const g=useGame(),hero=heroes[g.hero],phase=g.phase,info=realmInfo[g.realm],length=realmLength(g.realm),q=g.question;
 const [opening,setOpening]=useState(true);
-useEffect(()=>{void loadTraffic(window.location)},[]);
 const [near,setNear]=useState(false),[distance,setDistance]=useState(0),[notes,setNotes]=useState(false),[help,setHelp]=useState(false),[dossier,setDossier]=useState(false),[credits,setCredits]=useState(false),[scoreOpen,setScoreOpen]=useState(false),[itemIntroOpen,setItemIntroOpen]=useState(false),[heroPickerOpen,setHeroPickerOpen]=useState(false),[profile,setProfile]=useState(0),[threat,setThreat]=useState(''),[flash,setFlash]=useState(''),[mechanismNote,setMechanismNote]=useState('');
 const [usageOpen,setUsageOpen]=useState(false);
 const closeUsage=useCallback(()=>setUsageOpen(false),[]);
