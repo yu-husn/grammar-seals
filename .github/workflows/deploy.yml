@@ -55,7 +55,9 @@ jobs:
             const { artifacts } = await response.json();
             const matches = artifacts.filter(artifact => artifact.name === process.env.SITE_ARTIFACT && !artifact.expired);
             if (matches.length === 1) {
-              console.log('The uploaded site is available for deployment.');
+              // Pages uses a separate artifact index that can lag behind the REST listing.
+              console.log('The uploaded site is available. Allowing Pages artifact metadata to settle.');
+              await new Promise(resolve => setTimeout(resolve, 30000));
               process.exit(0);
             }
             await new Promise(resolve => setTimeout(resolve, 5000));
