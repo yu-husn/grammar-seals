@@ -1,10 +1,10 @@
 export const openingShots=[
- {id:'land',title:'語法大地',caption:'動作、狀態、身分與存在，各有秩序。四枚句型靈印，守護著這片大地的生機。',duration:5},
- {id:'invasion',title:'無言君，率眾而來',caption:'大魔王無言君率領巡夜影衛、鏡面仕女、喪屍判官與虛藏守將，佔領語法大地，奪走四枚靈印。',duration:8},
- {id:'chase',title:'躲過四大關主的追擊',caption:'四大關主全數追來！辨句使者，穿越四大禁域，避開追擊、及時閃避，守住你的生命。',duration:6},
- {id:'grammar',title:'用判斷，解開封印',caption:'辨清敘事句、表態句、判斷句與有無句，回答石碑的問題，讓正確的語法判斷改變世界。',duration:7},
- {id:'items',title:'善用六種道具',caption:'疾風靴助你閃避，縛魔索減緩追擊；逆時珠、誅邪彈、金鐘罩與延命丹，將助你闖過險境。',duration:7},
- {id:'renewal',title:'讓大地，重拾生機',caption:'收回四枚靈印，挑戰無言君。讓四句歸序，讓語法大地再次綻放。你的冒險，現在開始。',duration:7},
+ {id:'land',title:'語法大地，寧靜祥和',caption:'曾經，敘事、表態、判斷、有無四枚句型靈印，守護語法大地。萬物各安其位，生生不息。',duration:5},
+ {id:'invasion',title:'無言君，奪印而來',caption:'黑暗魔王「無言君」率領四大關主入侵，奪走四枚靈印。語句錯亂、封印失控，整片大地陷入混沌。',duration:8},
+ {id:'chase',title:'辨句使者，踏入禁域',caption:'現在，你將化身辨句使者「{name}」，深入四大禁域，躲避追擊、擊退魔物，奪回失落的靈印。',duration:6},
+ {id:'grammar',title:'用智慧，解開封印',caption:'辨清敘事、表態、判斷、有無，回答石碑的問題，破解句型謎團，讓錯亂的語句重新歸序。',duration:7},
+ {id:'items',title:'蒐集補給，善用道具',caption:'冒險途中，你可以蒐集補給、累積獎勵、兌換道具，強化自己實力，闖過重重險境。',duration:7},
+ {id:'renewal',title:'集結靈印，迎戰無言君',caption:'集齊四枚靈印，開啟魔王殿大門，破解最後封印，讓大地重拾生機！辨句使者{name}，語法大地的命運，就掌握在你手中！',duration:7},
 ] as const;
 export const openingDuration=openingShots.reduce((n,s)=>n+s.duration,0);
 export const openingStart=(index:number)=>openingShots.slice(0,index).reduce((n,s)=>n+s.duration,0);
