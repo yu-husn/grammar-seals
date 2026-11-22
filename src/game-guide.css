@@ -1,0 +1,12 @@
+.game-guide{width:min(100%,900px);font-family:var(--font-ui)}
+.game-guide h3{margin:24px 0 10px;color:var(--gold);font:700 22px/1.5 var(--font-ui)}
+.game-guide p{font:500 20px/1.8 var(--font-ui);margin:8px 0 16px}
+.game-guide .section-head{position:sticky;top:-30px;background:#193846;z-index:1;padding:12px 0;border-bottom:1px solid var(--line)}
+.game-guide .section-head h2{margin:0}.game-guide .section-head button{min-height:44px}
+.guide-mission{border:1px solid var(--line);margin:10px 0;padding:0;background:#142d38}
+.guide-mission summary{padding:14px 18px;font:700 22px/1.5 var(--font-ui);color:var(--gold)}
+.guide-mission ol{list-style:none;margin:0;padding:4px 18px 16px;display:grid;gap:12px}
+.guide-mission li{display:flex;gap:14px;align-items:flex-start}
+.guide-mission li>span{flex:none;display:grid;place-items:center;width:28px;height:30px;border:1px solid var(--line);color:var(--gold);font:700 18px/1 var(--font-ui);margin-top:5px}
+.guide-mission li>p{margin:0;min-width:0;overflow-wrap:anywhere}
+@media(max-width:700px){.game-guide .section-head{top:-22px}.game-guide h3,.guide-mission summary{font-size:20px}.game-guide p{font-size:18px;line-height:1.75}.guide-mission summary{padding:12px}.guide-mission ol{padding:4px 12px 14px}.guide-mission li{gap:10px}}
