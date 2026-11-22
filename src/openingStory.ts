@@ -1,7 +1,7 @@
 export const openingShots=[
  {id:'land',title:'語法大地，寧靜祥和',caption:'曾經，敘事、表態、判斷、有無四枚句型靈印，守護語法大地。萬物各安其位，生生不息。',duration:5},
  {id:'invasion',title:'無言君，奪印而來',caption:'黑暗魔王「無言君」率領四大關主入侵，奪走四枚靈印。語句錯亂、封印失控，整片大地陷入混沌。',duration:8},
- {id:'chase',title:'辨句使者，踏入禁域',caption:'現在，你將化身辨句使者「{name}」，深入四大禁域，躲避追擊、擊退魔物，奪回失落的靈印。',duration:6},
+ {id:'chase',title:'辨句使者，踏入禁域',caption:'現在，你將化身「辨句使者」，深入四大禁域，躲避追擊、擊退魔物，奪回失落的靈印。',duration:6},
  {id:'grammar',title:'用智慧，解開封印',caption:'辨清敘事、表態、判斷、有無，回答石碑的問題，破解句型謎團，讓錯亂的語句重新歸序。',duration:7},
  {id:'items',title:'蒐集補給，善用道具',caption:'冒險途中，你可以蒐集補給、累積獎勵、兌換道具，強化自己實力，闖過重重險境。',duration:7},
  {id:'renewal',title:'集結靈印，迎戰無言君',caption:'集齊四枚靈印，開啟魔王殿大門，破解最後封印，讓大地重拾生機！辨句使者{name}，語法大地的命運，就掌握在你手中！',duration:7},
