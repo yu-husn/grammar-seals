@@ -49,4 +49,4 @@ React、TypeScript、Vite、Three.js、React Three Fiber、drei、Zustand、GSAP
 
 正式題庫218題，已保留教師確認分類與刪修；歷屆出處目前為基測，沒有冒標為教育會考原題。來源與核對程度逐題註明，可於遊戲題庫頁查看；保留來源標示不代表第三方內容已改採其他授權。
 
-音樂為Kevin MacLeod作品（CC BY 4.0）；主要字體為Noto Sans TC（SIL OFL 1.1）。完整署名及字體資訊見[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)與遊戲內「音樂與授權」。
+音樂為Kevin MacLeod作品（CC BY 4.0）；主要字體為Noto Sans TC（SIL OFL 1.1）。完整署名及字體資訊見[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)與遊戲內「音樂授權」。
